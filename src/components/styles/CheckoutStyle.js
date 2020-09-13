@@ -23,20 +23,7 @@ const styles = {
   checkout__img_ad: {
     width: "100%",
   },
-  Checkout__product_img: {
-    width: "100%",
-  },
-  Checkout__remove__button: {
-    backgroundColor: "#f2c85f",
-    margin: "0.6rem 0",
-    fontSize: 12,
-    "&:hover": {
-      backgroundColor: "#ffdb80",
-    },
-  },
-  checkout__rating: {
-    display: 'flex'
-  }
+
 };
 
 export default styles;

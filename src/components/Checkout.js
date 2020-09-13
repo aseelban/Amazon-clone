@@ -4,54 +4,11 @@ import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/styles";
 import Subtotal from "./Subtotal";
 import { useStateValue } from "../context/StateProvider";
-import { Button } from "@material-ui/core";
+import CheckoutProduct from "./CheckoutProduct";
 
-function Checkout({ classes, id, title, image, price, rating }) {
+function Checkout({ classes }) {
   const [{ basket }, dispatch] = useStateValue();
 
-  console.log(basket);
-
-  const handleClick = (e) => {
-    basket.filter((product) => product.id !== e.target.id);
-    console.log(basket.map((e) => e.id));
-  };
-
-  const list__products = basket.map((item) => {
-    return (
-      <Grid
-        key={item.id}
-        container
-        spacing={1}
-        direction="row"
-        justify="flex-start"
-      >
-        <Grid items xs={4}>
-          <img className={classes.Checkout__product_img} src={item.image} />
-        </Grid>
-        <Grid items xs={7}>
-          <h4>{item.title}</h4>
-          <p>{item.price}$</p>
-          <div className={classes.checkout__rating}>
-            {Array(item.rating)
-              .fill()
-              .map((_, i) => {
-                return <div>⭐</div>;
-              })}
-          </div>
-          <Button
-            className={classes.Checkout__remove__button}
-            size="small"
-            variant="outlined"
-            variant="contained"
-            onClick={handleClick}
-            id={item.id}
-          >
-            Remove from chekout
-          </Button>
-        </Grid>
-      </Grid>
-    );
-  });
   return (
     <div className={classes.checkout}>
       <Grid
@@ -80,7 +37,15 @@ function Checkout({ classes, id, title, image, price, rating }) {
           {/* 
             render the checkout list items:
           */}
-          {list__products}
+          {basket.map((product) => (
+            <CheckoutProduct
+              id={product.id}
+              title={product.title}
+              image={product.image}
+              price={product.price}
+              rating={product.rating}
+            />
+          ))}
         </Grid>
         {/* 
             Subtotal:

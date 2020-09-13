@@ -9,7 +9,7 @@ function Home() {
       <div className="home__container">
         <img className="home__image" src={prime_background} />
       </div>
-      <div className="home__row">
+      <div className="home__row first">
         <Product
           id={1}
           title="Apple Watch"
@@ -30,7 +30,7 @@ function Home() {
           rating={3}
         />
       </div>
-      <div className="home__row">
+      <div className="home__row second">
         <Product
           id={3}
           title="Xbox One S 1TB Console
