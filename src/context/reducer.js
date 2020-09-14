@@ -1,12 +1,14 @@
 export const initialState = {
   basket: [],
-  //user: null
+  user: null
 };
 
-export const getBasketTotal = (basket) => {
-  return basket?.reduce((amount, item) => item.price + amount, 0);
-};
-export const reducer = (state, action) => {
+// Selector
+export const getBasketTotal = (basket) => 
+  basket?.reduce((amount, item) => item.price + amount, 0);
+
+const reducer = (state, action) => {
+  console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       return {
@@ -14,27 +16,35 @@ export const reducer = (state, action) => {
         basket: [...state.basket, action.item],
       };
 
-      // remove product by index, becuse if there is more item for one proudct then filter by id will delete them all
-      // so to fix this problem we used index to remove items.
     case "REMOVE_FROM_BASKET":
-      const get_index_product = state.basket.findIndex(
+      const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
-
       let newBasket = [...state.basket];
 
-      if (get_index_product >= 0) {
-        newBasket.splice(get_index_product, 1);
+      if (index >= 0) {
+        newBasket.splice(index, 1);
+
       } else {
-        console.warn("Error");
+        console.warn(
+          `Cant remove product (id: ${action.id}) as its not in basket!`
+        )
       }
 
       return {
         ...state,
-        basket: newBasket,
-      };
+        basket: newBasket
+      }
+    
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user
+      }
 
     default:
       return state;
   }
 };
+
+export default reducer;

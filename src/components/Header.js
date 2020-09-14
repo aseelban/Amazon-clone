@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/Header.css";
 import logo from "./img/amazon-logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useStateValue } from "../context/StateProvider";
+import { auth } from "../firebase";
 
 const Header = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
+  const handleAuthentication = () => {
+    console.log(user);
+    console.log(basket);
+    if (user) {
+      auth.signOut();
+    }
 
+    console.warn("clicked");
+  };
   return (
     <div className="header">
       <Link to="/">
@@ -22,10 +31,16 @@ const Header = () => {
       </div>
 
       <div className="header__nav">
-        <div className="header__option">
-          <span className="header__optionLineOne">Hello Guest</span>
-          <span className="header__optionLineTwo">Sign in</span>
-        </div>
+        <Link to={!user && "/login"}>
+          <div onClick={handleAuthentication} className="header__option">
+            <span className="header__optionLineOne">
+              Hello {user ? user.email : "Guset"}
+            </span>
+            <span className="header__optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
+          </div>
+        </Link>
         <div className="header__option">
           <span className="header__optionLineOne">Returns</span>
           <span className="header__optionLineTwo">& Orders</span>
@@ -37,7 +52,9 @@ const Header = () => {
         <Link to="/checkout">
           <div className="header__optionBasket">
             <LocalMallOutlinedIcon />
-  <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+            <span className="header__optionLineTwo header__basketCount">
+              {basket?.length}
+            </span>
           </div>
         </Link>
       </div>
