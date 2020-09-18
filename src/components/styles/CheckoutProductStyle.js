@@ -1,4 +1,10 @@
 const styles = {
+  CheckoutProduct__wrapper: {
+    width: 'calc(100% + 8px)',
+    border: '1.2px solid #d7d7d7',
+    padding: '1rem',
+    margin: '0.3rem 0',
+  },
     CheckoutProduct__img: {
       width: "180px",
       height: '180px',

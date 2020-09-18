@@ -38,8 +38,9 @@ function Checkout({ classes }) {
           {/* 
             render the checkout list items:
           */}
-          {basket.map((product) => (
+          {basket.map((product,i) => (
             <CheckoutProduct
+            key={i}
               id={product.id}
               title={product.title}
               image={product.image}

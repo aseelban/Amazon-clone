@@ -22,6 +22,7 @@ function CheckoutProductProduct({ classes, id, title, image, price, rating }) {
         spacing={1}
         direction="row"
         justify="flex-start"
+        className={classes.CheckoutProduct__wrapper}
       >
         <Grid items xs={4}>
           <img className={classes.CheckoutProduct__img} src={image} />
@@ -33,7 +34,7 @@ function CheckoutProductProduct({ classes, id, title, image, price, rating }) {
             {Array(rating)
               .fill()
               .map((_, i) => {
-                return <StarRateRoundedIcon className={classes.CheckoutProduct__ratingIcon}/>;
+                return <StarRateRoundedIcon key={i} className={classes.CheckoutProduct__ratingIcon}/>;
               })}
           </div>
           <Button

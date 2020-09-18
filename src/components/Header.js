@@ -1,65 +1,87 @@
-import React, { useEffect, useState } from "react";
-import "./styles/Header.css";
+import React from "react";
+import { withStyles } from "@material-ui/styles";
+import styles from "./styles/HeaderStyle";
 import logo from "./img/amazon-logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
 import { Link, useHistory } from "react-router-dom";
 import { useStateValue } from "../context/StateProvider";
 import { auth } from "../firebase";
+import { Grid } from "@material-ui/core";
+import HeaderMenu from "./HeaderMenu";
 
-const Header = () => {
+const Header = ({ classes }) => {
   const [{ basket, user }, dispatch] = useStateValue();
 
   const handleAuthentication = () => {
-    console.log(user);
-    console.log(basket);
     if (user) {
       auth.signOut();
     }
-
-    console.warn("clicked");
   };
+
   return (
-    <div className="header">
-      <Link to="/">
-        <img className="header__logo" src={logo} />
-      </Link>
+    <Grid
+      className={classes.header}
+      container
+      direction="row"
+      justify="space-between"
+      alignItems="flex-start"
+    >
+      <Grid item xs={10} md={1}>
+        {/* logo */}
+        <Link to="/">
+          <img className={classes.header__logo} src={logo} />
+        </Link>
+      </Grid>
+      {/* search bar */}
+      <Grid className={classes.header__search} item xs={0} md={7}>
+        <input className={classes.header__searchInput} type="text" />
+        <SearchIcon className={classes.header__searchIcon} />
+      </Grid>
 
-      <div className="header__search">
-        <input className="header__searchInput" type="text" />
-        <SearchIcon className="header__searchIcon" />
-      </div>
+      {/* toggle menu "mobile" */}
+      <Grid className={classes.header__nav__toggle} item xs={2}>
+        <HeaderMenu />
+      </Grid>
 
-      <div className="header__nav">
+      {/* nav item */}
+      <Grid className={classes.header__nav} item xs={0} md={3}>
         <Link to={!user && "/login"}>
-          <div onClick={handleAuthentication} className="header__option">
-            <span className="header__optionLineOne">
+          <div
+            onClick={handleAuthentication}
+            className={classes.header__option}
+          >
+            <span className={classes.header__optionLineOne}>
               Hello {user ? user.email : "Guset"}
             </span>
-            <span className="header__optionLineTwo">
+            <span className={classes.header__optionLineTwo}>
               {user ? "Sign Out" : "Sign In"}
             </span>
           </div>
         </Link>
-        <div className="header__option">
-          <span className="header__optionLineOne">Returns</span>
-          <span className="header__optionLineTwo">& Orders</span>
+        <div className={classes.header__option}>
+          <span className={classes.header__optionLineOne}>Returns</span>
+          <span className={classes.header__optionLineTwo}>& Orders</span>
         </div>
-        <div className="header__option">
-          <span className="header__optionLineOne">Your</span>
-          <span className="header__optionLineTwo">Prime</span>
+        <div className={classes.header__option}>
+          <span className={classes.header__optionLineOne}>Your</span>
+          <span className={classes.header__optionLineTwo}>Prime</span>
         </div>
         <Link to="/checkout">
-          <div className="header__optionBasket">
+          <div className={classes.header__optionBasket}>
             <LocalMallOutlinedIcon />
-            <span className="header__optionLineTwo header__basketCount">
+            <span
+              className={
+                (classes.header__optionLineTwo, classes.header__basketCount)
+              }
+            >
               {basket?.length}
             </span>
           </div>
         </Link>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   );
 };
 
-export default Header;
+export default withStyles(styles)(Header);

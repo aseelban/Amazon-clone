@@ -11,9 +11,16 @@ import styles from "./styles/SubTotalStyle";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../context/StateProvider";
 import { getBasketTotal } from "../context/reducer";
+import { useHistory } from "react-router-dom";
 
 function Subtotal({ classes, id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
+  const history = useHistory();
+
+  const handleCheckout = (e) => {
+    e.preventDefault()
+    history.push('/payment');
+  } 
 
 
   return (
@@ -45,6 +52,7 @@ function Subtotal({ classes, id, title, image, price, rating }) {
                   className={classes.checkout__right__buttom}
                   variant="contained"
                   // onClick={sum_total}
+                  onClick={handleCheckout}
                 >
                   Proceed to checkout
                 </Button>

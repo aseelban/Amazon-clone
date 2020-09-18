@@ -6,6 +6,9 @@ import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import { useStateValue } from "./context/StateProvider";
 import { auth } from "./firebase";
+import NotFoundPage from "./components/NotFoundPage";
+import Payment from "./components/Payment";
+import './app.css'
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -13,7 +16,7 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       console.log("Username => ", authUser);
-      
+
       if (authUser) {
         // the user logged in // the user was logged in
         dispatch({
@@ -31,6 +34,7 @@ function App() {
   }, []);
 
   return (
+    <div className={'app_wrapper'}>
     <Router>
       <Switch>
         <Route exact path="/">
@@ -41,11 +45,20 @@ function App() {
           <Header />
           <Checkout />
         </Route>
+        <Route exact path="/payment">
+          <Header />
+          <Payment />
+        </Route>
         <Route exact path="/login">
           <Login />
         </Route>
+        <Route>
+          <Header />
+          <NotFoundPage />
+        </Route>
       </Switch>
     </Router>
+    </div>
   );
 }
 

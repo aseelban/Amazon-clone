@@ -1,0 +1,4 @@
+/* to fix overflow  */
+.app_wrapper{
+    overflow-x: hidden;
+}
