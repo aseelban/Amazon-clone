@@ -29,7 +29,7 @@ const styles = {
 
   header__searchInput: {
     height: 12,
-    padding: 10,
+    padding: 11,
     border: "none",
     width: "100%",
     borderTopLeftRadius: 5,

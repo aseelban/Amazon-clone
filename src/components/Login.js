@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { withStyles } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 import styles from "./styles/LoginStyle";
+import logo from "./img/amazon_logo_login.png";
+
 import {
   FormControl,
   TextField,
@@ -63,12 +65,7 @@ function Login({ classes }) {
       >
         <Grid className={classes.Login__image__wrapper} item xs="12">
           <Link to="/">
-            <img
-              className={classes.Login__logo}
-              src={
-                "https://www.nextbigbrand.in/wp-content/uploads/2020/01/amazon_PNG13.png"
-              }
-            />
+            <img className={classes.Login__logo} src={logo} />
           </Link>
         </Grid>
         <Grid item xs="12">
