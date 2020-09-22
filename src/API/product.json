@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "title lorem ipsum dummy text ipsum dummy text",
+    "image": "https://pngimg.com/uploads/coffee_machine/coffee_machine_PNG17289.png",
+    "oldPrice": 950,
+    "price": 835,
+    "rating": 3
+  },
+  {
+    "id": 2,
+    "title": "title lorem ipsum dummy text ipsum dummy text",
+    "image": "https://pngimg.com/uploads/headphones/headphones_PNG7659.png",
+    "oldPrice": 249,
+    "price": 120,
+    "rating": 3
+  },
+  {
+    "id": 3,
+    "title": "title lorem ipsum dummy text ipsum dummy text",
+    "image": "https://pngimg.com/uploads/drone/drone_PNG81.png",
+    "oldPrice": 695,
+    "price": 544,
+    "rating": 3
+  },
+  {
+    "id": 4,
+    "title": "title lorem ipsum dummy text ipsum dummy text",
+    "image": "https://pngimg.com/uploads/iphone_11/iphone_11_PNG33.png",
+    "oldPrice": 920,
+    "price": 810,
+    "rating": 3
+  }
+]

@@ -19,7 +19,7 @@ const styles = {
       },
   },
   home__wrapper__discover:{
-    padding:' 1rem 0',
+    // padding:' 1rem 0',
     marginBottom: '5rem'
   },
   Home__product__title: {

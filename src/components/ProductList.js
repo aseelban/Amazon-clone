@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./styles/DiscoverIconsStyle.css";
-import first from "./img/first.png";
-import second from "./img/second.png";
-import third from "./img/third.png";
-import forth from "./img/forth.png";
-import fifth from "./img/fifth.png";
-import six from "./img/six.png";
+import Product from "./Product";
+import data from "../API/product.json";
+import "./styles/DiscoverListStyle.css";
 
-function DiscoverIcons() {
+function ProductList() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(() => data.map((e) => e));
+  }, []);
+
   return (
     <frameElement className="DiscoverIcons__img__warpper">
       <Carousel
         additionalTransfrom={0}
         autoPlay={true}
         arrows
-        autoPlaySpeed={3000}
+        autoPlaySpeed={4000}
         centerMode={false}
         className=""
         containerClass="container"
@@ -35,7 +37,7 @@ function DiscoverIcons() {
               max: 3000,
               min: 1024,
             },
-            items: 6,
+            items: 4,
             partialVisibilityGutter: 40,
           },
           mobile: {
@@ -43,7 +45,7 @@ function DiscoverIcons() {
               max: 767.98,
               min: 0,
             },
-            items: 3,
+            items: 2,
             partialVisibilityGutter: 30,
           },
           tablet: {
@@ -51,7 +53,7 @@ function DiscoverIcons() {
               max: 1024,
               min: 767.98,
             },
-            items: 5,
+            items: 3,
             partialVisibilityGutter: 30,
           },
         }}
@@ -62,15 +64,23 @@ function DiscoverIcons() {
         infinite={true}
         style={{ margin: "0 auto" }}
       >
-        <img src={first} />
-        <img src={second} />
-        <img src={third} />
-        <img src={forth} />
-        <img src={fifth} />
-        <img src={six} />
+        {/* 
+          products
+        */}
+        {products.map((product) => (
+          <Product
+            key={product.id}
+            id={product.id}
+            title={product.title}
+            image={product.image}
+            oldPrice={product.oldPrice}
+            price={product.price}
+            rating={product.rating}
+          />
+        ))}
       </Carousel>
     </frameElement>
   );
 }
 
-export default DiscoverIcons;
+export default ProductList;

@@ -2,7 +2,6 @@ import React from "react";
 import { useStateValue } from "../context/StateProvider";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-//import "./Card.css";
 import { withStyles } from "@material-ui/styles";
 import styles from "./styles/ProductStyle";
 

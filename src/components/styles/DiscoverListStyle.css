@@ -1,4 +1,4 @@
-.DiscoverIcons__warpper {
+.DiscoverList__warpper {
     text-align: center;
 }
 
@@ -9,7 +9,7 @@
     min-height: 30px;
     z-index: 10 !important;
 }
-.DiscoverIcons__img__warpper img {
+.DiscoverList__img__warpper img {
     width: 120px;
     height: 120px;
     

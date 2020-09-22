@@ -5,7 +5,7 @@ import {
   FormControlLabel,
   FormGroup,
 } from "@material-ui/core";
-import React, { useState } from "react";
+import React from "react";
 import { withStyles } from "@material-ui/styles";
 import styles from "./styles/SubTotalStyle";
 import CurrencyFormat from "react-currency-format";
@@ -13,15 +13,14 @@ import { useStateValue } from "../context/StateProvider";
 import { getBasketTotal } from "../context/reducer";
 import { useHistory } from "react-router-dom";
 
-function Subtotal({ classes, id, title, image, price, rating }) {
+function Subtotal({ classes }) {
   const [{ basket }, dispatch] = useStateValue();
   const history = useHistory();
 
   const handleCheckout = (e) => {
-    e.preventDefault()
-    history.push('/payment');
-  } 
-
+    e.preventDefault();
+    history.push("/payment");
+  };
 
   return (
     <div className="Subtotal">
