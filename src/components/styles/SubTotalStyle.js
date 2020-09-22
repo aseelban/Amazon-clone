@@ -13,10 +13,12 @@ const styles = {
   },
   subtotal__items: {
       display: 'inline-block',
-      marginRight: '5px'
-  },
-  subtotal__price : {
-      fontWeight: '600'
+      marginRight: '5px',
+      fontSize: 16,
+    },
+    subtotal__price : {
+      fontWeight: '600',
+      fontSize: 16,
   }
 };
 

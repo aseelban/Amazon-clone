@@ -24,10 +24,10 @@ function CheckoutProductProduct({ classes, id, title, image, price, rating }) {
         justify="flex-start"
         className={classes.CheckoutProduct__wrapper}
       >
-        <Grid items xs={4}>
+        <Grid className={classes.CheckoutProduct__img__wrapper} items xs={4}>
           <img className={classes.CheckoutProduct__img} src={image} />
         </Grid>
-        <Grid items xs={7}>
+        <Grid className={classes.CheckoutProduct__info} items xs={7}>
           <h4>{title}</h4>
           <p>{price}$</p>
           <div className={classes.CheckoutProduct__rating}>

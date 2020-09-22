@@ -4,6 +4,7 @@ import {
   Checkbox,
   FormControlLabel,
   FormGroup,
+  Typography,
 } from "@material-ui/core";
 import React from "react";
 import { withStyles } from "@material-ui/styles";
@@ -29,10 +30,14 @@ function Subtotal({ classes }) {
           return (
             <>
               <Card className={classes.chekout__right__wrapper}>
-                <div className={classes.subtotal__items}>
-                  {/* Subtotal ({basket?.length} items): */}
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  className={classes.subtotal__items}
+                >
                   Subtotal ({basket?.length} items):
-                </div>
+                </Typography>
+
                 <span className={classes.subtotal__price}>{value}</span>
                 <FormGroup row>
                   <FormControlLabel
