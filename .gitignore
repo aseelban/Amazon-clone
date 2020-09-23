@@ -22,8 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-//firebase
+
+# Firebase Hosting
+.firebaserc
+firebase-debug.log
 firebase.json
-.firebase
 /.firebase
 /functions
