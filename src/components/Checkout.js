@@ -19,7 +19,6 @@ function Checkout({ classes }) {
         justify="flex-start"
         alignItems="center"
         className={classes.checkout__wrapper__ad__subtotal}
-        // alignItems="stretch"
       >
         <Grid className={classes.chekout__left} item xs={11} md={7} lg={7}>
           {/* 
@@ -44,7 +43,7 @@ function Checkout({ classes }) {
       >
         {/* 
             shopping list items
-          */}
+        */}
         <Grid className={classes.checkout__list} item xs={12} md={8}>
           <div className={classes.checkout__left__title}>
             <h2>Your shopping list:</h2>
@@ -52,7 +51,7 @@ function Checkout({ classes }) {
         </Grid>
         {/* 
             render the checkout list items:
-          */}
+        */}
         <Grid className={classes.checkout__list__product} item xs={12} md={8}>
           {basket.map((product, i) => (
             <CheckoutProduct
@@ -71,24 +70,3 @@ function Checkout({ classes }) {
 }
 
 export default withStyles(styles)(Checkout);
-
-// {/*
-//   shopping list items
-// */}
-// <div className={classes.checkout__left__title}>
-//   <h3>{user && "Hello, " + user?.email}</h3>
-//   <h2>Your shopping list:</h2>
-// </div>
-// {/*
-//   render the checkout list items:
-// */}
-// {basket.map((product, i) => (
-//   <CheckoutProduct
-//     key={i}
-//     id={product.id}
-//     title={product.title}
-//     image={product.image}
-//     price={product.price}
-//     rating={product.rating}
-//   />
-// ))}
