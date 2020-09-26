@@ -8,6 +8,9 @@ const styles = {
     [breakpoints.down("sm")]: {
       justifyContent: "center",
     },
+    [breakpoints.up("sm")]: {
+      marginLeft: '1.5rem',
+    },
   },
   paper: {
     textAlign: "center",
