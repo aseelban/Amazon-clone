@@ -8,6 +8,7 @@ import { useStateValue } from "./context/StateProvider";
 import { auth } from "./firebase";
 import NotFoundPage from "./components/NotFoundPage";
 import Payment from "./components/Payment";
+import PaymentV2 from "./components/PaymentV2";
 import './app.css'
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
         </Route>
         <Route exact path="/payment">
           <Header />
-          <Payment />
+          <PaymentV2 />
         </Route>
         <Route exact path="/login">
           <Login />
