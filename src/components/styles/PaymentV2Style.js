@@ -36,16 +36,16 @@ const styles = {
     position: "relative",
     top: "0.9rem",
   },
-  Payment__wrapper__input: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    alignItems: 'center',
-    margin: '2rem 0',
-  },
-  Payment__input: {
-    display: "flex",
-  },
+  // Payment__wrapper__input: {
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   flexDirection: 'column',
+  //   alignItems: 'center',
+  //   margin: '2rem 0',
+  // },
+  // Payment__input: {
+  //   display: "flex",
+  // },
   Payment__wrapper__input__PaymentForm: {
     backgroundColor: "#d7d7d77a",
     WebkitBoxShadow: "13px 15px 10px -6px rgba(153,153,153,0.6)",
