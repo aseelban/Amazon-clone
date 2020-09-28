@@ -9,7 +9,8 @@ import { auth } from "./firebase";
 import NotFoundPage from "./components/NotFoundPage";
 import Payment from "./components/Payment";
 import PaymentV2 from "./components/PaymentV2";
-import './app.css'
+import "./app.css";
+import Footer from "./components/Footer";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -35,30 +36,33 @@ function App() {
   }, []);
 
   return (
-    <div className={'app_wrapper'}>
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Header />
-          <Home />
-        </Route>
-        <Route exact path="/checkout">
-          <Header />
-          <Checkout />
-        </Route>
-        <Route exact path="/payment">
-          <Header />
-          <PaymentV2 />
-        </Route>
-        <Route exact path="/login">
-          <Login />
-        </Route>
-        <Route>
-          <Header />
-          <NotFoundPage />
-        </Route>
-      </Switch>
-    </Router>
+    <div className={"app_wrapper"}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Header />
+            <Home />
+            <Footer />
+          </Route>
+          <Route exact path="/checkout">
+            <Header />
+            <Checkout />
+            <Footer />
+          </Route>
+          <Route exact path="/payment">
+            <Header />
+            <PaymentV2 />
+            <Footer />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route>
+            <Header />
+            <NotFoundPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

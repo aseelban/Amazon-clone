@@ -76,6 +76,8 @@ export default class PaymentForm extends React.Component {
                   variant="standard"
                   size="small"
                   label="Card Name"
+                  inputProps={{ maxLength: 26 }}
+
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
@@ -94,6 +96,8 @@ export default class PaymentForm extends React.Component {
                   variant="standard"
                   size="small"
                   label="Card Number"
+                  inputProps={{ maxLength: 16 }}
+
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
@@ -105,6 +109,7 @@ export default class PaymentForm extends React.Component {
               </Grid>
 
               <Grid item xs="0" sm="3" md="3">
+
                 <TextField
                   type="tel"
                   name="expiry"
@@ -114,6 +119,8 @@ export default class PaymentForm extends React.Component {
                   variant="standard"
                   size="small"
                   label="EXPIRY"
+                  inputProps={{ maxLength: 4 }}
+
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
@@ -132,6 +139,8 @@ export default class PaymentForm extends React.Component {
                   variant="standard"
                   size="small"
                   label="CVC"
+                  inputProps={{ maxLength: 3 }}
+
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">

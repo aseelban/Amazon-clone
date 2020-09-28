@@ -35,7 +35,7 @@ const Header = ({ classes }) => {
       </Grid>
       {/* search bar */}
       <Grid className={classes.header__search} item xs={0} md={7}>
-        <input className={classes.header__searchInput} type="text" />
+        <input placeholder="cherch for product" className={classes.header__searchInput} type="text" />
         <SearchIcon className={classes.header__searchIcon} />
       </Grid>
 

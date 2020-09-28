@@ -34,14 +34,17 @@ const styles = {
     width: "100%",
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
+    height: '1.6rem !important'
   },
-
+  
   header__searchIcon: {
-    padding: 5,
+    padding: 2,
     height: "22px !important",
     backgroundColor: mainColors.icon_bg_color,
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
+    height: '1.6rem !important'
+
   },
 
   header__nav: {

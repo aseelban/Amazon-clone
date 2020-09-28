@@ -1,8 +1,6 @@
 const styles = {
   Payment__wrapper: {
-    // backgroundColor: 'red'
     height: "100%",
-    // padding: '20rem',
     marginBottom: '2rem',
   },
   PaymentV2__cardNum: {
@@ -37,16 +35,6 @@ const styles = {
     position: "relative",
     top: "0.9rem",
   },
-  // Payment__wrapper__input: {
-  //   display: 'flex',
-  //   justifyContent: 'center',
-  //   flexDirection: 'column',
-  //   alignItems: 'center',
-  //   margin: '2rem 0',
-  // },
-  // Payment__input: {
-  //   display: "flex",
-  // },
   Payment__wrapper__children: {
     backgroundColor: "#d7d7d77a",
     padding: '1.5rem 0 3rem 0',
