@@ -7,7 +7,7 @@ function PaymentUserInfo({ classes }) {
   return (
     <Grid className={classes.Payment__wrapper__input} item md="12">
       <Typography
-        variant="h5"
+        variant="h6"
         className="PaymentForm__title"
         gutterBottom
         display="inline"

@@ -21,7 +21,7 @@ function PaymentOrder({ classes }) {
     >
       <Grid className={classes.PaymentOrder__wrapper__title} item md="12">
         <Typography
-          variant="h5"
+          variant="h6"
           className="PaymentForm__title"
           gutterBottom
           display="inline"
@@ -32,15 +32,16 @@ function PaymentOrder({ classes }) {
       <Grid item md="12">
         <ul className={classes.PaymentOrder__wrapper__list}>
           <li>
-            <span className={classes.PaymentOrder__key}>Subtotal</span>{" "}
+            <span className={classes.PaymentOrder__key}>Subtotal <span className={classes.PaymentOrder__vat}>(Inclusive of VAT)
+</span></span>
             <span className={classes.PaymentOrder__val}>${getBasketTotal(basket)}</span>
           </li>
           <li>
-            <span className={classes.PaymentOrder__key}>Total Items</span>{" "}
+            <span className={classes.PaymentOrder__key}>Total Items</span>
             <span className={classes.PaymentOrder__val}>{basket?.length}</span>
           </li>
           <li>
-            <span className={classes.PaymentOrder__key}>Shipping Fee</span>{" "}
+            <span className={classes.PaymentOrder__key}>Shipping Fee</span>
             <span className={classes.PaymentOrder__val}>Free</span>
           </li>
         </ul>

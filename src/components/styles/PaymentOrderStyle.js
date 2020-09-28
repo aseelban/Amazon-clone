@@ -22,9 +22,10 @@ const styles = {
   PaymentOrder__key: {
     marginRight: '3rem',
   },
-//   PaymentOrder__val: {
-//     margin: 0 0.5rem;
-//   },
+  PaymentOrder__vat: {
+    color: 'rgb(126, 133, 155)',
+    fontSize: '0.9rem',
+  }
 };
 
 export default styles;

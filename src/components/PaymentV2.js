@@ -24,14 +24,14 @@ function PaymentV2({ classes }) {
         <Grid className={classes.Payment__title} item md="12">
           <StorefrontIcon />
           <Typography
-            variant="h6"
-            gutterBottom
+            variant="h5"
+            gutterBottom={false}
             //className={classes.Home__product__title}
           >
             Checkout
           </Typography>
         </Grid>
-        <div className={classes.Payment__wrapper__input__PaymentForm}>
+        <div className={classes.Payment__wrapper__children}>
           <PaymentOrder />
           <PaymentUserInfo />
           <PaymentForm />

@@ -46,7 +46,7 @@ export default class PaymentForm extends React.Component {
           >
             <Grid item xs="12">
               <Typography
-                variant="h5"
+                variant="h6"
                 className="PaymentForm__title"
                 gutterBottom
                 display="inline"
