@@ -3,6 +3,9 @@ import breakpoints from "./breakpoints";
 const styles = {
   checkout: {
     margin: "1rem 2rem",
+    [breakpoints.down("sm")]: {
+      marginBottom: "7rem",
+    },
   },
   checkout__wrapper__ad__subtotal: {
     [breakpoints.down("sm")]: {

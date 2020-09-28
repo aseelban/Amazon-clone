@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import Header from "./components/Header";
-import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Checkout from "./components/Checkout";
-import Login from "./components/Login";
 import { useStateValue } from "./context/StateProvider";
 import { auth } from "./firebase";
+import "./app.css";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Checkout from "./components/Checkout";
+import Login from "./components/Login";
 import NotFoundPage from "./components/NotFoundPage";
 import Payment from "./components/Payment";
-import PaymentV2 from "./components/PaymentV2";
-import "./app.css";
 import Footer from "./components/Footer";
 
 function App() {
@@ -51,7 +50,7 @@ function App() {
           </Route>
           <Route exact path="/payment">
             <Header />
-            <PaymentV2 />
+            <Payment />
             <Footer />
           </Route>
           <Route exact path="/login">

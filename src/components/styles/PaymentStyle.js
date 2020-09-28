@@ -1,74 +1,50 @@
-const style = {
-  // _________
-
-  /// checkout title (hero) section:
-
-  // ________
-  Payment__checkout__title: {
-    backgroundColor: "#13192129",
-    textAlign: "center",
-    padding: "1.3rem 0",
+const styles = {
+  Payment__wrapper: {
+    height: "100%",
+    marginBottom: '2rem',
   },
-  Payment__link: {
-    textDecoration: "none",
-    color: "#435cea",
+  PaymentV2__cardNum: {
+    "& input": {
+      color: "#fff",
+    },
+    "& label.Mui-focused": {
+      color: "#fff",
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "#fff",
+      },
+      "&:hover fieldset": {
+        borderColor: "#fff",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#fff",
+      },
+    },
+    "&:focus": {
+      border: "1px solid #F0C14B",
+    },
   },
-  // _________
-
-  /// delvery section:
-
-  // ________
-  Payment__delvery__title: {
+  Payment__title: {
     display: "flex",
     alignItems: "center",
-    padding: "1rem 0",
+    justifyContent: "center",
+    padding: "1rem 2rem",
+    background: "#e1e3e3",
+    borderRadius: 5,
+    position: "relative",
+    top: "0.9rem",
   },
-  Payment__delvery__title__text: {
-    marginLeft: "4rem",
-  },
-  Payment__delvery__info: {
-    display: "flex",
-    // alignItems: "center",
-    // justifyContent: "center",
-    padding: "1rem 0",
-  },
-  Payment__delvery: {
-    display: "flex",
-    flexDirection: "row",
-    padding: "1rem",
-  },
-  //   Payment__review__title: {
-  //     display: "flex",
-  //     padding: "1rem",
-  //   },
+  Payment__wrapper__children: {
+    backgroundColor: "#d7d7d77a",
+    padding: '1.5rem 0 3rem 0',
+    WebkitBoxShadow: '13px 15px 10px -6px rgba(153,153,153,0.6)',
+    MozBoxShadow: "13px 15px 10px -6px rgba(153,153,153,0.6)",
+    boxShadow: "13px 15px 10px -6px rgba(153,153,153,0.6)",
+    borderRadius: 6,
 
-    // _________
-
-  /// review section:
-
-  // ________
-
-  Payment__review__title: {
-    display: "flex",
-    // justifyContent: "center",
-    padding: "1rem 0",
   },
-  Payment__review__title: {
-    marginLeft: "4rem",
-  },
-  // _________
 
-  /// payment method section:
-
-  // ________
-  Payment__method__title: {
-    display: "flex",
-    alignItems: "center",
-    padding: "1rem 0",
-  },
-  Payment__method__title__text: {
-    marginLeft: "4rem",
-  },
 };
 
-export default style;
+export default styles;

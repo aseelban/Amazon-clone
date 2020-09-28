@@ -1,23 +1,27 @@
 import React from "react";
-import "./styles/footer.css";
+import MobileNavigation from "./MobileNavigation";
+import { withStyles } from "@material-ui/styles";
+//import "./styles/footer.css";
+import styles from './styles/FooterStyle'
 
-function Footer() {
+
+function Footer({classes}) {
   return (
     <>
-      <footer>
-        <nav class="footer-inner">
-          <section class="footer-item">
+      <footer className={classes.footer__wrapper}>
+        <nav className={classes.footer__inner}>
+          <section className={classes.footer__item}>
             <h1>LOGO</h1>
 
             <h2>
               We create possibilities <br />
               for the connected world.
               <br />
-              <b class="color">Be Bold.</b>
+              <b className={classes.footer__color}>Be Bold.</b>
             </h2>
           </section>
 
-          <section class="footer-item">
+          <section className={classes.footer__item}>
             <h3>Explore</h3>
             <ul>
               <li>
@@ -35,7 +39,7 @@ function Footer() {
             </ul>
           </section>
 
-          <section class="footer-item">
+          <section className={classes.footer__item}>
             <h3>Visit</h3>
             <a href="#">
               <p>Envoy So. California</p>
@@ -44,7 +48,7 @@ function Footer() {
             </a>
           </section>
 
-          <section class="footer-item">
+          <section className={classes.footer__item}>
             <h3>Follow</h3>
             <ul>
               <li>
@@ -59,7 +63,7 @@ function Footer() {
             </ul>
           </section>
 
-          <section class="footer-item">
+          <section className={classes.footer__item}>
             <h3>Legal</h3>
             <ul>
               <li>
@@ -71,16 +75,19 @@ function Footer() {
             </ul>
           </section>
 
-          <section class="footer-item">
-            <a href="#" class="footer-button">
+          <section className={classes.footer__item}>
+            <a href="#" className={classes.footer__button}>
               Next: About
             </a>
             <a />
           </section>
         </nav>
       </footer>
+      <div class={classes.footer__MobileNavigation}>
+        <MobileNavigation />
+      </div>
     </>
   );
 }
 
-export default Footer;
+export default withStyles(styles) (Footer);
