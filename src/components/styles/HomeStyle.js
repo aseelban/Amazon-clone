@@ -1,4 +1,3 @@
-import zIndex from "@material-ui/core/styles/zIndex";
 import breakpoints from "./breakpoints";
 
 const styles = {
@@ -21,7 +20,6 @@ const styles = {
     },
   },
   home__wrapper__discover: {
-    // padding:' 1rem 0',
     marginBottom: "5rem",
   },
   Home__product__title: {
@@ -31,6 +29,10 @@ const styles = {
     WebkitBoxShadow: "-13px 1px 21px 0px rgb(175 175 175 / 75%)",
     MozBoxShadow: "-13px 1px 21px 0px rgb(175 175 175 / 75%)",
     boxShadow: "-13px 1px 21px 0px rgb(175 175 175 / 75%)",
+    [breakpoints.down("sm")]: {
+      padding: '0.2rem 1rem',
+      fontSize: 15,
+    },
   },
 };
 

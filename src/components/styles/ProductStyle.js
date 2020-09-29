@@ -1,3 +1,5 @@
+import breakpoints from "./breakpoints";
+
 const styles = {
   product__card: {
     width: "auto",
@@ -31,6 +33,7 @@ const styles = {
   product__tumb__img: {
     maxWidth: "100%",
     maxHeight: "100%",
+    objectFit: 'contain'
   },
 
   product__details: {
@@ -45,8 +48,12 @@ const styles = {
     color: "#363636",
     textDecoration: "none",
     transition: "03s",
+    textAlign: 'start',
     "&:hover": {
       color: "#fbb72c",
+    },
+    [breakpoints.down("sm")]: {
+      fontSize: 15,
     },
   },
 
@@ -64,12 +71,16 @@ const styles = {
     fontWeight: 600,
     float: "left",
     width: "50%",
+    textAlign: 'start',
     "& small": {
       fontSize: "80%",
       fontWeight: 400,
       textDecoration: "line-through",
       display: "inline-block",
       marginRight: 5,
+    },
+    [breakpoints.down("sm")]: {
+      fontSize: 17,
     },
   },
 

@@ -29,7 +29,7 @@ function DiscoverList() {
         minimumTouchDrag={80}
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
-        removeArrowOnDeviceType={['mobile']}
+        arrows={false}
         responsive={{
           desktop: {
             breakpoint: {

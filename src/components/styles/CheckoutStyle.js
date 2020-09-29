@@ -44,6 +44,9 @@ const styles = {
     margin: "1rem 0",
     borderBottom: "1px solid #d7d7d7",
     padding: "1rem 0.2rem",
+    [breakpoints.down("sm")]: {
+      fontSize: 12,
+    },
   },
   checkout__img_ad: {
     width: "100%",

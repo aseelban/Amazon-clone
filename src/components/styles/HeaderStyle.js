@@ -10,6 +10,10 @@ const styles = {
     position: "sticky",
     top: 0,
     zIndex: 100,
+
+    "& a": {
+      textDecoration: 'none',
+    }
   },
   header__logo: {
     width: 100,

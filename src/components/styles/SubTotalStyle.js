@@ -13,9 +13,16 @@ const styles = {
     [breakpoints.down("sm")]: {
       padding: "1.3rem 0.9rem",
     },
+    "& .MuiFormControlLabel-label": {
+      fontSize: 13,
+    },
   },
   checkout__right__buttom: {
     backgroundColor: "#F2C85F",
+    [breakpoints.down("sm")]: {
+      padding: "0.4rem",
+      fontSize: 12,
+    },
   },
   subtotal__items: {
     display: "inline-block",

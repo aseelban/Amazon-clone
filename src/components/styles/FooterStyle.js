@@ -4,7 +4,7 @@ const styles = {
   footer__wrapper: {
     backgroundColor: "#232F3E",
     fontFamily: "Lato, sans-serif",
-    padding: "50px 0 85px 0",
+    padding: "50px 0 7px 0",
     marginTop: "7rem",
 
     "& h1": {
@@ -24,8 +24,8 @@ const styles = {
       padding: "15px 0 0 0",
     },
     "& h3": {
-      fontWeight: 400,
-      fontSize: 13,
+      fontWeight: 700,
+      fontSize: 15,
       color: "white",
       margin: 0,
       paddingBottom: 9,
@@ -65,10 +65,11 @@ const styles = {
     },
   },
   footer__inner: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
     width: "90%",
     marginLeft: "auto",
     marginRight: "auto",
-    marginBottom: 120,
     maxWidth: 1170,
     position: "relative",
 
@@ -144,20 +145,22 @@ const styles = {
     transition: "1s",
     transitionDelay: ".2s",
     padding: 14,
-    // "& after": {
-    //   content: '"',
-    //   position: "absolute",
-    //   top: 45,
-    //   right: 13,
-    //   backgroundColor: "white",
-    //   height: 1,
-    //   width: 86,
-    //   transition: ".6s",
-    // },
-    // "& hover": {
-    //   color: "black",
-    //   backgroundColor: "white",
-    // },
+
+  },
+  footer__credit: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '2rem',
+    borderTop: '1px solid #69696991',
+    padding: '1rem 0',
+    color: '#cecece',
+    fontSize: 13,
+
+    "& svg":{
+      fontSize: 14,
+      color: '#e80e0e',
+    }
   },
   footer__MobileNavigation:{
     [breakpoints.up("sm")]: {

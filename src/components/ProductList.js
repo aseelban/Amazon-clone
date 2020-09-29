@@ -3,24 +3,23 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from "./Product";
 import data from "../API/product.json";
-import "./styles/DiscoverListStyle.css";
+import "./styles/ProductListStyle.css";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(() => data.map((e) => e));
+    setProducts(() => data.map((product) => product));
   }, []);
 
   return (
-    <frameElement className="DiscoverIcons__img__warpper">
+    <frameElement className="ProductList__img__warpper">
       <Carousel
         additionalTransfrom={0}
         autoPlay={true}
         arrows
         autoPlaySpeed={4000}
         centerMode={false}
-        className=""
         containerClass="container"
         dotListClass=""
         draggable
@@ -58,7 +57,7 @@ function ProductList() {
           },
         }}
         showDots={false}
-        sliderClass="DiscoverIcons__warpper"
+        sliderClass="ProductList__warpper"
         slidesToSlide={1}
         swipeable
         infinite={true}

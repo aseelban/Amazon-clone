@@ -1,4 +1,4 @@
-.DiscoverList__img__warpper {
+.ProductList__warpper {
     text-align: center;
 }
 
@@ -9,7 +9,7 @@
     min-height: 30px;
     z-index: 10 !important;
 }
-.DiscoverList__img__warpper img {
+.ProductList__img__warpper img {
     width: 120px;
     height: 120px;
     

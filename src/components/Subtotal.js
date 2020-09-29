@@ -43,8 +43,6 @@ function Subtotal({ classes }) {
                   <FormControlLabel
                     control={
                       <Checkbox
-                        // checked={state.checkedB}
-                        // onChange={handleChange}
                         name="checkedB"
                         color="primary"
                       />
@@ -55,7 +53,6 @@ function Subtotal({ classes }) {
                 <Button
                   className={classes.checkout__right__buttom}
                   variant="contained"
-                  // onClick={sum_total}
                   onClick={handleCheckout}
                 >
                   Proceed to checkout
