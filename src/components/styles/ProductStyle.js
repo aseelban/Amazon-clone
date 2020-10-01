@@ -27,17 +27,19 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     height: 150,
-    /* padding: 25px; */
     background: "transparent",
   },
   product__tumb__img: {
     maxWidth: "100%",
     maxHeight: "100%",
-    objectFit: 'contain'
+    objectFit: "contain",
   },
 
   product__details: {
     padding: "30px",
+    [breakpoints.down("sm")]: {
+      padding: 12,
+    },
   },
 
   product__details__link: {
@@ -48,7 +50,7 @@ const styles = {
     color: "#363636",
     textDecoration: "none",
     transition: "03s",
-    textAlign: 'start',
+    textAlign: "start",
     "&:hover": {
       color: "#fbb72c",
     },
@@ -71,7 +73,7 @@ const styles = {
     fontWeight: 600,
     float: "left",
     width: "50%",
-    textAlign: 'start',
+    textAlign: "start",
     "& small": {
       fontSize: "80%",
       fontWeight: 400,

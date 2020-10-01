@@ -1,6 +1,5 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import "./styles/PaymentV2.css";
 import styles from "./styles/PaymentStyle";
 import {
   Grid,

@@ -2,14 +2,11 @@ import breakpoints from "./breakpoints";
 
 const styles = {
   CheckoutProduct__wrapper: {
-    // width: "calc(100% + 8px)",
     boxShadow: "0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)",
     WebkitBoxShadow:
       "0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)",
     MozBoxShadow:
       "0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)",
-    // padding: '1rem',
-    // margin: '0.3rem 0',
     padding: "2rem 2rem 2rem 0",
     margin: "0.6rem 0",
     "&:hover": {
@@ -61,14 +58,12 @@ const styles = {
   },
   CheckoutProduct__remove__button: {
     backgroundColor: "#f2c85f",
-    // margin: "0.6rem 0",
     fontSize: 12,
     "&:hover": {
       backgroundColor: "#ffdb80",
     },
   },
   CheckoutProduct__rating: {
-    // display: "flex",
     [breakpoints.down("sm")]: {
       marginBottom: '0.2rem',
     },
