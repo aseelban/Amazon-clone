@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { withStyles } from "@material-ui/styles";
 import styles from "./styles/HomeStyle";
 import prime_background from "./img/home_prime_img.jpg";
@@ -7,6 +7,9 @@ import DiscoverList from "./DiscoverList";
 import ProductList from "./ProductList";
 
 function Home({ classes }) {
+  useEffect(() => {
+    document.title = "AmazonClone - Home";
+  }, []);
   return (
     <div className={classes.home}>
       <div className={classes.home__container}>

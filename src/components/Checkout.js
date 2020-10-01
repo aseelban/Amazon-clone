@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./styles/CheckoutStyle";
 import amazon_banner from "./img/amazon_banner.png";
 import Grid from "@material-ui/core/Grid";
@@ -9,6 +9,10 @@ import CheckoutProduct from "./CheckoutProduct";
 
 function Checkout({ classes }) {
   const [{ basket, user }, dispatch] = useStateValue();
+
+  useEffect(() => {
+    document.title = "AmazonClone - Cart";
+  }, []);
 
   return (
     <div className={classes.checkout}>
