@@ -1,22 +1,29 @@
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase";
 import { withStyles } from "@material-ui/styles";
-import Grid from "@material-ui/core/Grid";
 import styles from "./styles/LoginStyle";
+import Grid from "@material-ui/core/Grid";
 import logo from "./img/amazon_logo_login.png";
-
 import {
   FormControl,
   TextField,
   Button,
   Divider,
   Typography,
+  IconButton,
+  Collapse,
 } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
-import { auth } from "../firebase";
+import Alert from "@material-ui/lab/Alert";
+import CloseIcon from "@material-ui/icons/Close";
+
 
 function Login({ classes }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLogged, setIslogged] = useState(false);
+  const [open, setOpen] = React.useState(true);
+
   const history = useHistory();
 
   const handleEmail = (e) => {
@@ -34,25 +41,27 @@ function Login({ classes }) {
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         if (auth) {
-          history.push("/");
+          setTimeout(() => {
+            history.push("/");
+          }, 500);
         }
       })
-      .catch((error) => alert(error.message));
+      .catch((error) => setIslogged(true));
   };
 
-  const register = (e) => {
-    e.preventDefault();
+  // const register = (e) => {
+  //   e.preventDefault();
 
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
-        // it successfully created a new user with email and password
-        if (auth) {
-          history.push("/");
-        }
-      })
-      .catch((error) => alert(error.message));
-  };
+  //   auth
+  //     .createUserWithEmailAndPassword(email, password)
+  //     .then((auth) => {
+  //       // it successfully created a new user with email and password
+  //       if (auth) {
+  //         history.push("/");
+  //       }
+  //     })
+  //     .catch((error) => alert(error.message));
+  // };
 
   return (
     <div className={classes.Login__wrapper}>
@@ -103,6 +112,30 @@ function Login({ classes }) {
                 Login
               </Button>
             </FormControl>
+              <div className={classes.Login__error__msg}>
+                {isLogged && (
+                  <Collapse in={open}>
+                    <Alert
+                      severity="error"
+                      action={
+                        <IconButton
+                          aria-label="close"
+                          color="inherit"
+                          size="small"
+                          onClick={() => {
+                            setIslogged(false);
+                          }}
+                        >
+                          <CloseIcon fontSize="inherit" />
+                        </IconButton>
+                      }
+                    >
+                      The Email and password you entered did not match our
+                      records. Please double-check and try again.
+                    </Alert>
+                  </Collapse>
+                )}
+              </div>
             <p className={classes.Login__legalText}>
               By continuing, you agree to Amazon's Conditions of Use and Privacy
               Notice.
@@ -118,7 +151,7 @@ function Login({ classes }) {
             </Typography>
             <Divider variant="middle" />
             <Button
-              onClick={register}
+              onClick={() => history.push("/signup")}
               variant="contained"
               size="small"
               color="defualt"

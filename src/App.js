@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import NotFoundPage from "./components/NotFoundPage";
 import Payment from "./components/Payment";
 import Footer from "./components/Footer";
+import Signup from "./components/Signup";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -17,6 +18,7 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       console.log("Username => ", authUser);
+      console.log("Username => ", authUser?.displayName);
 
       if (authUser) {
         // the user logged in // the user was logged in
@@ -24,6 +26,7 @@ function App() {
           type: "SET_USER",
           user: authUser,
         });
+
       } else {
         // the user logged out
         dispatch({
@@ -55,6 +58,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
           <Route>
             <Header />

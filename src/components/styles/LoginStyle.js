@@ -98,6 +98,15 @@ const styles = {
     textAlign: 'center',
     marginTop: '1rem',
     padding: '0.5rem 0',
+  },
+  Login__error__msg: {
+    padding: "0.5rem 0.5rem",
+    "& .MuiAlert-action":{
+      alignItems: 'flex-start'
+    },
+    "& .MuiAlert-standardError":{
+      backgroundColor: "#fbebeb"
+    },
   }
 };
 
