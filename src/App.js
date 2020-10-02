@@ -65,6 +65,7 @@ function App() {
           <Route>
             <Header />
             <NotFoundPage />
+            <Footer />
           </Route>
         </Switch>
       </Router>

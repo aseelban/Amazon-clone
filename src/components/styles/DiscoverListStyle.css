@@ -17,3 +17,73 @@
     max-height: 200px;
     vertical-align: middle; 
 }
+
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  #container {
+    width: 550px;
+    margin: 90px 160px;
+  }
+  
+  #container * {
+    margin-bottom: 50px;
+    color: #383737;
+  }
+  
+  #container h1 {
+    width: auto;
+    display: inline-block;
+    font-size: 7em;
+    line-height: 100%;
+    letter-spacing: 0.2em;
+    text-shadow: 8px -3px 0 rgba(240, 85, 85, 0.6), -10px 5px 0 rgba(72, 104, 244, 0.6), 9px 7px 0 rgba(255, 219, 89, 0.6);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  #container h1:hover {
+    text-shadow: 4px -1px 0 rgba(240, 85, 85, 0.6), -5px 2px 0 rgba(72, 104, 244, 0.6), 6px 3px 0 rgba(255, 219, 89, 0.6);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  
+  #container h3 {
+    font-size: 2.5em;
+  }
+  
+  #container a {
+    padding: 15px 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    background-color: rgba(240, 85, 85, 0.9);
+    box-shadow: -7px 7px 0 rgba(72, 104, 244, 0.7), -12px 12px 0 rgba(255, 219, 89, 0.8);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  #container a:hover {
+    box-shadow: -3px 3px 0 rgba(72, 104, 244, 0.7), -6px 6px 0 rgba(255, 219, 89, 0.8);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  
