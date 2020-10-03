@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { auth, db } from "../firebase";
 import { withStyles } from "@material-ui/styles";
@@ -22,6 +22,11 @@ function Signup({ classes }) {
   const [isSigned, setISigned] = useState(false);
   const [open, setOpen] = React.useState(true);
   const history = useHistory();
+
+
+  useEffect(() => {
+    document.title = "AmazonClone - Sign up";
+  }, []);
 
   const handleUsername = (e) => {
     setUsername(e.target.value);

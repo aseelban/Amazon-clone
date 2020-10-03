@@ -9,6 +9,9 @@ const styles = {
     background: "#fafafa",
     height: "100%",
   },
+  Product__route:{
+    textDecoration: 'none',
+  },
 
   badge: {
     position: "absolute",
@@ -43,6 +46,7 @@ const styles = {
   },
 
   product__details__link: {
+    fontFamily: 'revert',
     fontWeight: 500,
     display: "block",
     marginBottom: 18,
@@ -51,6 +55,7 @@ const styles = {
     textDecoration: "none",
     transition: "03s",
     textAlign: "start",
+    fontSize: '1.1rem',
     "&:hover": {
       color: "#fbb72c",
     },
@@ -113,6 +118,18 @@ const styles = {
     "&:hover": {
       color: "#f00303",
     },
+  },
+  Product__oldPrice:{
+    fontFamily: 'system-ui',
+    fontSize: '1rem',
+    color: '#757575',
+    marginRight: '0.3rem',
+    textDecoration: 'line-through',
+  },
+  Product__newPrice:{
+    fontFamily: 'system-ui',
+    fontSize: '1rem',
+    color: "#ef8f00"
   },
 };
 

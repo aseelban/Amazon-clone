@@ -76,7 +76,7 @@ function Home({ classes }) {
         </Grid>
       </Grid>
       {/* list products */}
-      <Grid container direction="row" justify="center" alignItems="center">
+      <Grid className={classes.Home__wrapper__ProductsList} container direction="row" justify="center" alignItems="center">
         <Grid item xs={12}>
           <ProductList />
         </Grid>

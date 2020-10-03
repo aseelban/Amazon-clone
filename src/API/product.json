@@ -3,32 +3,40 @@
     "id": 1,
     "title": "Coffee machine",
     "image": "https://pngimg.com/uploads/coffee_machine/coffee_machine_PNG17289.png",
+    "brand": "Breville",
     "oldPrice": 950,
     "price": 835,
-    "rating": 3
+    "rating": 4,
+    "des": "Chefman InstaCoffee Single Serve Coffee Maker Brews in 30 Seconds, Compatible with K-Cup Pods, Grounds and Loose-Leaf Tea w/ Reusable Filter, Compact 14 oz, Black/Stainless Steel, Mug Not Included"
   },
   {
     "id": 2,
     "title": "Headphones",
     "image": "https://pngimg.com/uploads/headphones/headphones_PNG7659.png",
+    "brand": "Sony",
     "oldPrice": 249,
     "price": 120,
-    "rating": 3
+    "rating": 5,
+    "des": "Hear every word, note, and tune with incredible clarity, no matter your environment. These headphones feature additional microphones that assist in isolating sound while talking on the phone, resulting in improved phone call quality and the reduction of even more high and mid frequency sounds."
   },
   {
     "id": 3,
     "title": "Drone",
     "image": "https://pngimg.com/uploads/drone/drone_PNG81.png",
+    "brand": "DJI",
     "oldPrice": 695,
     "price": 544,
-    "rating": 3
+    "rating": 2,
+    "des": "DJI is the global leader in civilian drones, aerial imaging technology, and creative camera technology. Find out more here in our DJI Brand Store on Amazon. The company is dedicated to making aerial photography and filmmaking equipment and platforms more accessible and easier to use for creators around the world. Its products are used every day by customers in over 100 countries for filmmaking, construction, inspection, emergency response, agriculture, conservation, and beyond."
   },
   {
     "id": 4,
     "title": "iPhone 11",
     "image": "https://pngimg.com/uploads/iphone_11/iphone_11_PNG33.png",
+    "brand": "Apple",
     "oldPrice": 920,
     "price": 810,
-    "rating": 3
+    "rating": 5,
+    "des": "Wide-Angle Camera, Dust-Resistant, Facial Recognition, Fast Wireless Charging, Ultra Wide-Angle Camera, Water-Resistant, Dual Rear Cameras, Fast Charging, eSIM, 4K Video Recording"
   }
 ]

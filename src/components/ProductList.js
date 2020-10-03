@@ -3,7 +3,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from "./Product";
 import data from "../API/product.json";
-//import "./styles/ProductListStyle.css";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -13,14 +12,15 @@ function ProductList() {
   }, []);
 
   return (
-    <frameElement className="ProductList__img__warpper">
+    <frameElement>
       <Carousel
+        style={{ padding: "5rem 0" }}
         additionalTransfrom={0}
         autoPlay={true}
         arrows
         autoPlaySpeed={4000}
         centerMode={false}
-        containerClass="container"
+        containerClass="ProductList__container"
         dotListClass=""
         draggable
         focusOnSelect={false}
@@ -61,7 +61,7 @@ function ProductList() {
         slidesToSlide={1}
         swipeable
         infinite={true}
-        style={{ margin: "0 auto" }}
+        style={{ margin: "0 auto", padding: "5rem 0" }}
       >
         {/* 
           products

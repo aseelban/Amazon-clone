@@ -1,12 +1,14 @@
 import React from "react";
 import { useStateValue } from "../context/StateProvider";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 import { withStyles } from "@material-ui/styles";
 import styles from "./styles/ProductStyle";
+import { Link } from 'react-router-dom'
+
 
 function Product({ classes, id, title, image, oldPrice, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
+
+  const productdata = [id, title, image, oldPrice, price, rating];
 
   const addToBasket = () => {
     // push the data into data layer 'context API'
@@ -22,6 +24,7 @@ function Product({ classes, id, title, image, oldPrice, price, rating }) {
     });
   };
   return (
+    <Link className={classes.Product__route} productdata={productdata} test="123" to={`/products/${title}`}>
     <div class={classes.product__card}>
       <div class={classes.badge}>Hot</div>
       <div class={classes.product__tumb}>
@@ -33,19 +36,14 @@ function Product({ classes, id, title, image, oldPrice, price, rating }) {
         </h4>
         <div class={classes.product__bottom__details}>
           <div class={classes.product__price}>
-            <small>${oldPrice}</small>${price}
-          </div>
-          <div class={classes.product__links}>
-            <button className={classes.product__fav}>
-              <FavoriteIcon />
-            </button>
-            <button className={classes.product__cart} onClick={addToBasket}>
-              <ShoppingCartIcon />
-            </button>
+            {/* <small>${oldPrice}</small>${price} */}
+            <span className={classes.Product__oldPrice}>${oldPrice}</span>
+            <span className={classes.Product__newPrice}>${price}</span>
           </div>
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 

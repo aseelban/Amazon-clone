@@ -2,6 +2,10 @@ import breakpoints from "./breakpoints";
 
 const styles = {
   CheckoutProduct__wrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    position: 'relative',
+    textAlign: 'center',
     boxShadow: "0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)",
     WebkitBoxShadow:
       "0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)",
@@ -21,16 +25,22 @@ const styles = {
         margin: "0.5rem 0",
       },
     },
-    "& p": {
-      [breakpoints.down("sm")]: {
-        marginBottom: "0.4rem",
-      },
-    },
+
     [breakpoints.down("sm")]: {
       padding: "2rem 0",
     },
   },
 
+  CheckoutProduct__price: {
+    color: "#ef8f00",
+    fontWeight: 500,
+    marginTop: 5,
+    fontFamily: "system-ui",
+    fontSize: "1.1rem",
+    [breakpoints.down("sm")]: {
+      marginBottom: "0.4rem",
+    },
+  },
   CheckoutProduct__img: {
     width: "180px",
     height: "180px",
@@ -56,21 +66,31 @@ const styles = {
       marginTop: "0.5rem",
     },
   },
-  CheckoutProduct__remove__button: {
-    backgroundColor: "#f2c85f",
-    fontSize: 12,
-    "&:hover": {
-      backgroundColor: "#ffdb80",
-    },
-  },
   CheckoutProduct__rating: {
     [breakpoints.down("sm")]: {
-      marginBottom: '0.2rem',
+      marginBottom: "0.2rem",
     },
   },
   CheckoutProduct__ratingIcon: {
     color: "#f3af05",
   },
+  CheckoutProduct__route: {
+    textDecoration: "none",
+    color: "#000",
+  },
+  CheckoutProduct__wrapper__remove: {
+    position: 'absolute',
+    top: 10,
+    right: 0,
+    padding: '1px 4px',
+    background: '#eaeaea',
+    borderRadius: '5px 0px 0px 5px',
+    color: '#777672',
+    cursor: 'pointer',
+    "& svg":{
+      fontSize: '1.2rem',
+    }
+  }
 };
 
 export default styles;

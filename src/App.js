@@ -11,6 +11,8 @@ import NotFoundPage from "./components/NotFoundPage";
 import Payment from "./components/Payment";
 import Footer from "./components/Footer";
 import Signup from "./components/Signup";
+import ProductPage from "./components/ProductPage";
+import Products from './components/Products'
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -44,6 +46,16 @@ function App() {
           <Route exact path="/">
             <Header />
             <Home />
+            <Footer />
+          </Route>
+          <Route exact path="/products">
+            <Header />
+            <Products />
+            <Footer />
+          </Route>
+          <Route exact path="/products/:productID">
+            <Header />
+            <ProductPage />
             <Footer />
           </Route>
           <Route exact path="/checkout">
