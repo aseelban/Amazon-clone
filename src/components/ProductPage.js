@@ -8,6 +8,7 @@ import { Snackbar } from "@material-ui/core";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
+import ShareIcon from "@material-ui/icons/Share";
 
 function ProductPage() {
   const [{}, dispatch] = useStateValue();
@@ -93,11 +94,8 @@ function ProductPage() {
               <AddShoppingCartIcon />
               <span>add to cart</span>
             </button>
-            <a href="#!">
-              <img
-                src="http://co0kie.github.io/codepen/nike-product-page/share.png"
-                alt=""
-              />
+            <a href="#!" class="share" >
+              <ShareIcon />
             </a>
           </div>
         </div>

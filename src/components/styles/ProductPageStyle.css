@@ -297,3 +297,7 @@
 .snakerbar__wrapper .MuiPaper-root {
   background-color:#537290e3 !important;
 }
+
+.ProductPage__container .share svg {
+  color: #909090
+}
