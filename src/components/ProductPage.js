@@ -1,15 +1,37 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Rating } from "@material-ui/lab";
-import data from "../API/product.json";
-import "./styles/ProductPageStyle.css";
 import { useStateValue } from "../context/StateProvider";
+import data from "../API/product.json";
+import { useParams } from "react-router-dom";
+import "./styles/ProductPageStyle.css";
+import { Rating } from "@material-ui/lab";
+import { Snackbar } from "@material-ui/core";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import IconButton from "@material-ui/core/IconButton";
+import CloseIcon from "@material-ui/icons/Close";
 
 function ProductPage() {
-  const [product, setProduct] = useState([]);
-  const { productID } = useParams();
   const [{ basket }, dispatch] = useStateValue();
+  const { productID } = useParams();
+  const [product, setProduct] = useState([]);
+  const [state, setState] = React.useState({
+    horizontal: "center",
+    open: false,
+    vertical: "top",
+  });
+
+  const { vertical, horizontal, open } = state;
+
+  // snakebar msg
+  const SnakebarMsg = `Added ${product.title} to cart.`;
+
+  const handleClick = (newState) => () => {
+    setState({ open: true, ...newState });
+    // call basket handler
+    addToBasket();
+  };
+  const handleClose = () => {
+    setState({ ...state, open: false });
+  };
 
   const addToBasket = () => {
     // push the data into data layer 'context API'
@@ -26,12 +48,12 @@ function ProductPage() {
   };
 
   useEffect(() => {
-    let getProduct = data.find((productName) => productName.title === productID);
-    setProduct(getProduct)
-
-    
+    let getProduct = data.find(
+      (productName) => productName.title === productID
+    );
+    setProduct(getProduct);
   }, []);
-  
+
   useEffect(() => {
     document.title = `AmazonClone - ${product.title}`;
   });
@@ -45,7 +67,7 @@ function ProductPage() {
 
         <div class="ProductPage__product-details">
           <header>
-            <h1 class="ProductPage__title">{product?.title}</h1>
+            <h1 class="ProductPage__title">{product.title}</h1>
             <span class="ProductPage__colorCat">{product.brand}</span>
             <div class="ProductPage__newPrice">
               <span class="ProductPage__oldPrice">${product.oldPrice}</span>
@@ -64,7 +86,10 @@ function ProductPage() {
             <p>{product.des}</p>
           </article>
           <div class="ProductPage__footer">
-            <button type="button" onClick={addToBasket}>
+            <button
+              type="button"
+              onClick={handleClick({ vertical: "top", horizontal: "right" })}
+            >
               <AddShoppingCartIcon />
               <span>add to cart</span>
             </button>
@@ -76,6 +101,27 @@ function ProductPage() {
             </a>
           </div>
         </div>
+      </div>
+      <div class="snakerbar__wrapper">
+        <Snackbar
+          anchorOrigin={{ vertical, horizontal }}
+          autoHideDuration={9000}
+          open={open}
+          onClose={handleClose}
+          message={SnakebarMsg}
+          key={vertical + horizontal}
+          action={
+            <React.Fragment>
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+              >
+                <CloseIcon />
+              </IconButton>
+            </React.Fragment>
+          }
+        />
       </div>
     </>
   );

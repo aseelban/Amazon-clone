@@ -60,6 +60,22 @@ const styles = {
   },
   height: '100%',
   objectFit: 'contain',
+  title: {
+
+    [breakpoints.down("sm")]: {
+      fontSize: '1.3rem',
+   
+    },
+  },
+  emptyText: {
+    marginLeft: '2.1rem',
+    fontSize: '1.1rem',
+    [breakpoints.down("sm")]: {
+      fontSize: '1rem',
+      marginLeft: '2.2rem',
+   
+    },
+  }
 };
 
 export default styles;

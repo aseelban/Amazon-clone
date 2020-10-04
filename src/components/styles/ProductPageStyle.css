@@ -294,3 +294,6 @@
     width: 55%;
   }
 }
+.snakerbar__wrapper .MuiPaper-root {
+  background-color:#537290e3 !important;
+}

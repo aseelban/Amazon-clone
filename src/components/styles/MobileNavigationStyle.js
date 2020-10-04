@@ -10,6 +10,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderTop: '1px solid #dadada',
   },
   phone: {
     border: "2px solid #eee",
@@ -19,7 +20,7 @@ const styles = {
     width: "100%",
     height: "auto",
     boxShadow: "0 40px 80px rgba(0,0,0,0.15)",
-    padding: '0.7rem'
+    padding: '0.4rem'
 
   },
   nav__icons: {
