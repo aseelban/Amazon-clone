@@ -15,7 +15,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
-import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";

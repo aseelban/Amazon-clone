@@ -1,4 +1,4 @@
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 const drawerWidth = 240;
 const mainColors = { header_bg_color: "#131921", icon_bg_color: "#f3a847" };
 

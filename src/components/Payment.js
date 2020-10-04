@@ -24,7 +24,7 @@ function Payment({ classes }) {
         justify="center"
         alignItems="center"
       >
-        <Grid className={classes.title} item md="12">
+        <Grid className={classes.title} item md="12" item={true}>
           <StorefrontIcon />
           <Typography
             variant="h5"

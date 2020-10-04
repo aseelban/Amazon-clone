@@ -124,19 +124,12 @@ function Footer({ classes }) {
               </li>
             </ul>
           </section>
-          {/* 
-          <section className={classes.item}>
-            <a href="#" className={classes.button}>
-              Next: About
-            </a>
-            <a />
-          </section> */}
         </nav>
         <div className={classes.credit}>
           <span>Made with <span><FavoriteSharpIcon /></span> by AseelBan</span>
         </div>
       </footer>
-      <div class={classes.MobileNavigation}>
+      <div className={classes.MobileNavigation}>
         <MobileNavigation />
       </div>
     </>

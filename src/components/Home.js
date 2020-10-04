@@ -13,7 +13,7 @@ function Home({ classes }) {
   return (
     <div className={classes.container}>
       <div>
-        <img className={classes.image} src={prime_background} />
+        <img className={classes.image} src={prime_background} alt="prime ad"/>
       </div>
       {/* 
       - Discover section 

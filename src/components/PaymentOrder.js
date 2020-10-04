@@ -1,7 +1,4 @@
-import {
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { withStyles } from "@material-ui/styles";
 import styles from "./styles/PaymentOrderStyle";
@@ -9,7 +6,7 @@ import { useStateValue } from "../context/StateProvider";
 import { getBasketTotal } from "../context/reducer";
 
 function PaymentOrder({ classes }) {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   return (
     <Grid
@@ -32,8 +29,9 @@ function PaymentOrder({ classes }) {
       <Grid item md="12">
         <ul className={classes.wrapper__list}>
           <li>
-            <span className={classes.key}>Subtotal <span className={classes.vat}>(Inclusive of VAT)
-</span></span>
+            <span className={classes.key}>
+              Subtotal <span className={classes.vat}>(Inclusive of VAT)</span>
+            </span>
             <span className={classes.val}>${getBasketTotal(basket)}</span>
           </li>
           <li>

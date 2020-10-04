@@ -10,7 +10,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 
 function ProductPage() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
   const { productID } = useParams();
   const [product, setProduct] = useState([]);
   const [state, setState] = React.useState({

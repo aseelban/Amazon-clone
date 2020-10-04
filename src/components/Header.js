@@ -35,7 +35,7 @@ const Header = ({ classes }) => {
         </Link>
       </Grid>
       {/* search bar */}
-      <Grid className={classes.search} item xs={0} md={7}>
+      <Grid className={classes.search} item xs md={7}>
         <input placeholder="Search for product" className={classes.searchInput} type="text" />
         <SearchIcon className={classes.searchIcon} />
       </Grid>
@@ -46,7 +46,7 @@ const Header = ({ classes }) => {
       </Grid>
 
       {/* nav item */}
-      <Grid className={classes.nav} item xs={0} md={3}>
+      <Grid className={classes.nav} item xs md={3}>
         <Link to={!user && "/login"}>
           <div
             onClick={handleAuthentication}

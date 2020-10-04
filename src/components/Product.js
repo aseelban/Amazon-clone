@@ -25,17 +25,17 @@ function Product({ classes, id, title, image, oldPrice, price, rating }) {
   };
   return (
     <Link className={classes.Product__route} productdata={productdata} test="123" to={`/products/${title}`}>
-    <div class={classes.product__card}>
-      <div class={classes.badge}>Hot</div>
-      <div class={classes.product__tumb}>
-        <img class={classes.product__tumb__img} src={image} alt="" />
+    <div className={classes.product__card}>
+      <div className={classes.badge}>Hot</div>
+      <div className={classes.product__tumb}>
+        <img className={classes.product__tumb__img} src={image} alt="" />
       </div>
-      <div class={classes.product__details}>
+      <div className={classes.product__details}>
         <h4>
-          <a className={classes.product__details__link} href="">{title}</a>
+          <span className={classes.product__details__link} href="">{title}</span>
         </h4>
-        <div class={classes.product__bottom__details}>
-          <div class={classes.product__price}>
+        <div className={classes.product__bottom__details}>
+          <div className={classes.product__price}>
             <span className={classes.Product__oldPrice}>${oldPrice}</span>
             <span className={classes.Product__newPrice}>${price}</span>
           </div>

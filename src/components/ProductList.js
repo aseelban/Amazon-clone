@@ -12,7 +12,6 @@ function ProductList() {
   }, []);
 
   return (
-    <frameElement>
       <Carousel
         style={{ padding: "5rem 0" }}
         additionalTransfrom={0}
@@ -78,7 +77,6 @@ function ProductList() {
           />
         ))}
       </Carousel>
-    </frameElement>
   );
 }
 

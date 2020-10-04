@@ -6,8 +6,8 @@ import ClearIcon from "@material-ui/icons/Clear";
 import styles from "./styles/CheckoutProductStyle";
 import { useStateValue } from "../context/StateProvider";
 
-function CheckoutProductProduct({ classes, id, title, image, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+function CheckoutProductProduct({ classes, id, title, image, price }) {
+  const [{}, dispatch] = useStateValue();
 
 
   const handleRemove = () => {
@@ -32,12 +32,13 @@ function CheckoutProductProduct({ classes, id, title, image, price, rating }) {
             items
             xs={12}
             md={6}
+            item={true}
           >
-            <img className={classes.img} src={image} />
+            <img className={classes.img} src={image} alt={title} />
           </Grid>
         </Link>
 
-        <Grid className={classes.info} items xs={12} md={6}>
+        <Grid className={classes.info} items xs={12} md={6} item={true}>
           <h4>{title}</h4>
           <p className={classes.price}>${price}</p>
           <div className={classes.wrapper__remove}>

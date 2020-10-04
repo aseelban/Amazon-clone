@@ -9,7 +9,7 @@ import CheckoutProduct from "./CheckoutProduct";
 import { Typography } from "@material-ui/core";
 
 function Checkout({ classes }) {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket}, dispatch] = useStateValue();
 
   useEffect(() => {
     document.title = "AmazonClone - Cart";
