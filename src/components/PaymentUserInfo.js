@@ -5,7 +5,7 @@ import { Grid, TextField, Typography } from "@material-ui/core";
 
 function PaymentUserInfo({ classes }) {
   return (
-    <Grid className={classes.Payment__wrapper__input} item md="12">
+    <Grid className={classes.container} item md="12">
       <Typography
         variant="h6"
         className="PaymentForm__title"
@@ -21,7 +21,7 @@ function PaymentUserInfo({ classes }) {
         variant="outlined"
         size="small"
         marginNormal
-        className={classes.Payment__input}
+        
         // className={classes.Login__email__form}
         // onChange={handleEmail}
       />
@@ -34,7 +34,7 @@ function PaymentUserInfo({ classes }) {
         marginNormal
         // className={classes.Login__email__form}
         // onChange={handleEmail}
-        className={classes.Payment__input}
+        
       />
       <TextField
         // value={email}
@@ -45,7 +45,7 @@ function PaymentUserInfo({ classes }) {
         marginNormal
         // className={classes.Login__email__form}
         // onChange={handleEmail}
-        className={classes.Payment__input}
+        
       />
       <TextField
         // value={email}
@@ -56,7 +56,7 @@ function PaymentUserInfo({ classes }) {
         marginNormal
         // className={classes.Login__email__form}
         // onChange={handleEmail}
-        className={classes.Payment__input}
+        
       />
       <TextField
         // value={email}
@@ -67,7 +67,7 @@ function PaymentUserInfo({ classes }) {
         marginNormal
         // className={classes.Login__email__form}
         // onChange={handleEmail}
-        className={classes.Payment__input}
+        
       />
     </Grid>
   );

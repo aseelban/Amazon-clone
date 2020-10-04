@@ -1,7 +1,7 @@
 import breakpoints from "./breakpoints";
 
 const styles = {
-  home: {
+  container: {
     maxWidth: 1500,
     marginLeft: "auto",
     marginRight: "auto",
@@ -9,7 +9,7 @@ const styles = {
       marginBottom: "7rem",
     },
   },
-  home__image: {
+  image: {
     width: "100%",
     WebkitMaskImage: "linear-gradient(180deg,#000,transparent)",
     maskImage: "linear-gradient(180deg,#000,transparent)",
@@ -19,10 +19,10 @@ const styles = {
       marginBottom: "-50px",
     },
   },
-  home__wrapper__discover: {
+  wrapper__discover: {
     marginBottom: "5rem",
   },
-  Home__product__title: {
+  product__title: {
     color: "#6f6f6f",
     padding: "0.3rem 2.6rem",
     background: "#ffffffdb",
@@ -30,7 +30,7 @@ const styles = {
     MozBoxShadow: "-13px 1px 21px 0px rgb(175 175 175 / 75%)",
     boxShadow: "-13px 1px 21px 0px rgb(175 175 175 / 75%)",
     [breakpoints.down("sm")]: {
-      padding: '0.2rem 1rem',
+      padding: "0.2rem 1rem",
       fontSize: 15,
     },
   },

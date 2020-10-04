@@ -36,7 +36,6 @@ function Product({ classes, id, title, image, oldPrice, price, rating }) {
         </h4>
         <div class={classes.product__bottom__details}>
           <div class={classes.product__price}>
-            {/* <small>${oldPrice}</small>${price} */}
             <span className={classes.Product__oldPrice}>${oldPrice}</span>
             <span className={classes.Product__newPrice}>${price}</span>
           </div>

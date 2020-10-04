@@ -10,57 +10,58 @@ function ProductPage() {
   const [product, setProduct] = useState([]);
   const { productID } = useParams();
   const [{ basket }, dispatch] = useStateValue();
-  let _product = product[0];
 
   const addToBasket = () => {
     // push the data into data layer 'context API'
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
-        id: _product?.id,
-        title: _product?.title,
-        image: _product?.image,
-        price: _product?.price,
-        rating: _product?.rating,
+        id: product.id,
+        title: product.title,
+        image: product.image,
+        price: product.price,
+        rating: product.rating,
       },
     });
   };
 
   useEffect(() => {
-    let productData = data.filter(
-      (productName) => productName.title === productID
-    );
-    setProduct(productData);
-  }, []);
+    let getProduct = data.find((productName) => productName.title === productID);
+    setProduct(getProduct)
 
-  console.log(isNaN(_product?.rating));
+    
+  }, []);
+  
+  useEffect(() => {
+    document.title = `AmazonClone - ${product.title}`;
+  });
 
   return (
     <>
       <div class="ProductPage__container">
         <div class="ProductPage__product-image">
-          <img src={_product?.image} alt="" class="ProductPage__product-pic" />
+          <img src={product.image} alt="" class="ProductPage__product-pic" />
         </div>
 
         <div class="ProductPage__product-details">
           <header>
-            <h1 class="ProductPage__title">{_product?.title}</h1>
-            <span class="ProductPage__colorCat">{_product?.brand}</span>
+            <h1 class="ProductPage__title">{product?.title}</h1>
+            <span class="ProductPage__colorCat">{product.brand}</span>
             <div class="ProductPage__newPrice">
-              <span class="ProductPage__oldPrice">${_product?.oldPrice}</span>
-              <span class="ProductPage__current">${_product?.price}</span>
+              <span class="ProductPage__oldPrice">${product.oldPrice}</span>
+              <span class="ProductPage__current">${product.price}</span>
             </div>
             <div class="ProductPage__rate">
               <Rating
                 name="read-only"
-                value={parseInt(_product?.rating)}
+                value={parseInt(product.rating)}
                 readOnly
               />
             </div>
           </header>
           <article>
             <h5>Description</h5>
-            <p>{_product?.des}</p>
+            <p>{product.des}</p>
           </article>
           <div class="ProductPage__footer">
             <button type="button" onClick={addToBasket}>

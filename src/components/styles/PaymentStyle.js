@@ -1,5 +1,5 @@
 const styles = {
-  Payment__wrapper: {
+  container: {
     height: "100%",
     marginBottom: '2rem',
   },
@@ -25,7 +25,7 @@ const styles = {
       border: "1px solid #F0C14B",
     },
   },
-  Payment__title: {
+  title: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -35,7 +35,7 @@ const styles = {
     position: "relative",
     top: "0.9rem",
   },
-  Payment__wrapper__children: {
+  wrapper__children: {
     backgroundColor: "#d7d7d77a",
     padding: '1.5rem 0 3rem 0',
     WebkitBoxShadow: '13px 15px 10px -6px rgba(153,153,153,0.6)',

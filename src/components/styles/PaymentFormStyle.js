@@ -1,7 +1,7 @@
 import breakpoints from "./breakpoints";
 
 const styles = {
-  PaymentForm__container: {
+  container: {
     "& .MuiInput-root": {
       position: "relative",
       border: "1px solid #bdbdbd",
@@ -19,7 +19,7 @@ const styles = {
       margin: "2rem 0",
     },
   },
-  PaymentForm__wrapper__form: {
+  wrapper__form: {
     display: "flex",
     justifyContent: "center",
     textAlign: "center",
@@ -30,14 +30,14 @@ const styles = {
       padding: " 0 0.5rem",
     },
   },
-  PaymentForm__title: {
+  title: {
     borderLeft: "#2d79ecab 2px solid",
     padding: "0.5rem",
     borderRight: "#2d79ecab 2px solid",
     borderRadius: 5,
     marginBottom: "2rem !important",
   },
-  PaymentForm__submit__button: {
+  submit__button: {
     margin: "1rem 0 !important",
   },
 };

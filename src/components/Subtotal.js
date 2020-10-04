@@ -33,12 +33,12 @@ function Subtotal({ classes }) {
                 <Typography
                   variant="h6"
                   gutterBottom
-                  className={classes.subtotal__items}
+                  className={classes.items}
                 >
                   Subtotal ({basket?.length} items):
                 </Typography>
 
-                <span className={classes.subtotal__price}>{value}</span>
+                <span className={classes.price}>{value}</span>
                 <FormGroup row>
                   <FormControlLabel
                     control={

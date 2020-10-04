@@ -9,6 +9,7 @@ import { useStateValue } from "../context/StateProvider";
 function CheckoutProductProduct({ classes, id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
 
+
   const handleRemove = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",
@@ -20,26 +21,26 @@ function CheckoutProductProduct({ classes, id, title, image, price, rating }) {
       <Grid
         container
         direction="row"
-        className={classes.CheckoutProduct__wrapper}
+        className={classes.wrapper}
       >
         <Link
           to={`products/${title}`}
-          className={classes.CheckoutProduct__route}
+          className={classes.route}
         >
           <Grid
-            className={classes.CheckoutProduct__img__wrapper}
+            className={classes.img__wrapper}
             items
             xs={12}
             md={6}
           >
-            <img className={classes.CheckoutProduct__img} src={image} />
+            <img className={classes.img} src={image} />
           </Grid>
         </Link>
 
-        <Grid className={classes.CheckoutProduct__info} items xs={12} md={6}>
+        <Grid className={classes.info} items xs={12} md={6}>
           <h4>{title}</h4>
-          <p className={classes.CheckoutProduct__price}>${price}</p>
-          <div className={classes.CheckoutProduct__wrapper__remove}>
+          <p className={classes.price}>${price}</p>
+          <div className={classes.wrapper__remove}>
             <span onClick={handleRemove} id={id}>
               <ClearIcon />
             </span>

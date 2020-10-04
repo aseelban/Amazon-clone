@@ -6,7 +6,7 @@ import styles from "./styles/NotFoundPageStyle";
 
 function NotFoundPage({ classes }) {
   return (
-    <div className={classes.NotFoundPage__container}>
+    <div className={classes.container}>
       <h1>404</h1>
       <h3>Looks like the page you're looking for doesn't exist.</h3>
       <Link to="/">Take me back home</Link>

@@ -1,16 +1,16 @@
 const styles = {
-  Signup__wrapper: {
+  container: {
     overflow: "hidden",
   },
-  Signup__image__wrapper: {
+  image__wrapper: {
     display: "flex",
     justifyContent: "center",
   },
-  Signup__logo: {
+  logo: {
     width: 200,
     objectFit: "contain",
   },
-  Signup__form__wrapper: {
+  form__wrapper: {
     width: 350,
     border: "1px solid #d7d7d7",
     display: "flex",
@@ -22,10 +22,10 @@ const styles = {
     marginTop: "-1.5rem",
     padding: "1rem 0 1.2rem 0",
   },
-  Signup__form__title: {
+  form__title: {
     margin: "0.5rem 0",
   },
-  Signup__email__form: {
+  email__form: {
     margin: "0.5rem",
     color: "#F0C14B",
     "& label.Mui-focused": {
@@ -46,7 +46,7 @@ const styles = {
       border: "1px solid #F0C14B",
     },
   },
-  Signup__password__form: {
+  password__form: {
     margin: "0.5rem",
     "&:focus": {
       color: "#F0C14B",
@@ -66,21 +66,21 @@ const styles = {
       },
     },
   },
-  Signup__submit__form: {
+  submit__form: {
     margin: "0.5rem",
     backgroundColor: "#F0C14B",
     "&:hover": {
       backgroundColor: "#ecd089",
     },
   },
-  Signup__legalText: {
+  legalText: {
     padding: "0.5rem",
     textAlign: "start",
     fontSize: 12,
     lineHeight: 1.5,
     margin: "0 0.7rem",
   },
-  Signup__error__msg: {
+  error__msg: {
     padding: "0.5rem 0.5rem",
     "& .MuiAlert-action": {
       alignItems: "flex-start",
@@ -89,7 +89,7 @@ const styles = {
       backgroundColor: "#fbebeb",
     },
   },
-  Signup__error__msg: {
+  error__msg: {
     padding: "0.5rem 0.5rem",
     "& .MuiAlert-action": {
       alignItems: "flex-start",

@@ -42,13 +42,13 @@ function PaymentForm({ classes }) {
   };
 
   return (
-    <Grid item md="12" className={classes.PaymentForm__container}>
+    <Grid item md="12" className={classes.container}>
       <div id="PaymentForm">
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item xs="12">
             <Typography
               variant="h6"
-              className={classes.PaymentForm__title}
+              className={classes.title}
               gutterBottom
               display="inline"
             >
@@ -66,7 +66,7 @@ function PaymentForm({ classes }) {
               issuer="mastercard"
             />
           </Grid>
-          <form className={classes.PaymentForm__wrapper__form}>
+          <form className={classes.wrapper__form}>
             <Grid item xs="0" sm="3" md="3">
               <TextField
                 type="tel"
@@ -151,7 +151,7 @@ function PaymentForm({ classes }) {
             variant="contained"
             color="primary"
             endIcon={<SendIcon />}
-            className={classes.PaymentForm__submit__button}
+            className={classes.submit__button}
           >
             BUY
           </Button>

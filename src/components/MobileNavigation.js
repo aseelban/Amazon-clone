@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 function MobileNavigation({ classes }) {
 
   return (
-    <div className={classes.MobileNavigation__wrapper}>
-      <div className={classes.MobileNavigation__phone}>
-        <nav className={classes.MobileNavigation__nav__icons}>
+    <div className={classes.container}>
+      <div className={classes.phone}>
+        <nav className={classes.nav__icons}>
           <ul>
             <li>
               <Link to="/">

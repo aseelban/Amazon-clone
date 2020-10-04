@@ -23,7 +23,6 @@ function Signup({ classes }) {
   const [open, setOpen] = React.useState(true);
   const history = useHistory();
 
-
   useEffect(() => {
     document.title = "AmazonClone - Sign up";
   }, []);
@@ -54,7 +53,7 @@ function Signup({ classes }) {
   };
 
   return (
-    <div className={classes.Signup__wrapper}>
+    <div className={classes.container}>
       <Grid
         container
         spacing={1}
@@ -62,14 +61,14 @@ function Signup({ classes }) {
         justify="center"
         alignItems="stretch"
       >
-        <Grid className={classes.Signup__image__wrapper} item xs="12">
+        <Grid className={classes.image__wrapper} item xs="12">
           <Link to="/">
-            <img className={classes.Signup__logo} src={logo} />
+            <img className={classes.logo} src={logo} />
           </Link>
         </Grid>
         <Grid item xs="12">
-          <div className={classes.Signup__form__wrapper}>
-            <h3 className={classes.Signup__form__title}>Sign-up</h3>
+          <div className={classes.form__wrapper}>
+            <h3 className={classes.form__title}>Sign-up</h3>
             <FormControl>
               <TextField
                 value={username}
@@ -78,7 +77,7 @@ function Signup({ classes }) {
                 variant="outlined"
                 size="small"
                 marginNormal
-                className={classes.Signup__email__form}
+                className={classes.email__form}
                 onChange={handleUsername}
               />
               <TextField
@@ -88,7 +87,7 @@ function Signup({ classes }) {
                 variant="outlined"
                 size="small"
                 marginNormal
-                className={classes.Signup__email__form}
+                className={classes.email__form}
                 onChange={handleEmail}
               />
               <TextField
@@ -98,20 +97,20 @@ function Signup({ classes }) {
                 variant="outlined"
                 size="small"
                 marginNormal
-                className={classes.Signup__password__form}
+                className={classes.password__form}
                 onChange={handlePassword}
                 type={"password"}
               />
               <Button
                 variant="contained"
                 size="small"
-                className={classes.Signup__submit__form}
+                className={classes.submit__form}
                 onClick={register}
               >
                 Sign up
               </Button>
             </FormControl>
-            <div className={classes.Signup__error__msg}>
+            <div className={classes.error__msg}>
               {isSigned && (
                 <Collapse in={open}>
                   <Alert

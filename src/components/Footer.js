@@ -7,20 +7,20 @@ import styles from "./styles/FooterStyle";
 function Footer({ classes }) {
   return (
     <>
-      <footer className={classes.footer__wrapper}>
-        <nav className={classes.footer__inner}>
-          {/* <section className={classes.footer__item}>
+      <footer className={classes.wrapper}>
+        <nav className={classes.inner}>
+          {/* <section className={classes.item}>
             <h1>LOGO</h1>
 
             <h2>
               We create possibilities <br />
               for the connected world.
               <br />
-              <b className={classes.footer__color}>Be Bold.</b>
+              <b className={classes.color}>Be Bold.</b>
             </h2>
           </section> */}
 
-          <section className={classes.footer__item}>
+          <section className={classes.item}>
             <h3>Get to Know Us</h3>
             <ul>
               <li>
@@ -47,7 +47,7 @@ function Footer({ classes }) {
             </ul>
           </section>
 
-          <section className={classes.footer__item}>
+          <section className={classes.item}>
             <h3>Make Money with Us</h3>
             <ul>
               <li>
@@ -74,7 +74,7 @@ function Footer({ classes }) {
             </ul>
           </section>
 
-          <section className={classes.footer__item}>
+          <section className={classes.item}>
             <h3>Amazon Payment Products</h3>
             <ul>
               <li>
@@ -92,7 +92,7 @@ function Footer({ classes }) {
             </ul>
           </section>
 
-          <section className={classes.footer__item}>
+          <section className={classes.item}>
             <h3>Let Us Help You</h3>
             <ul>
               <li>
@@ -125,18 +125,18 @@ function Footer({ classes }) {
             </ul>
           </section>
           {/* 
-          <section className={classes.footer__item}>
-            <a href="#" className={classes.footer__button}>
+          <section className={classes.item}>
+            <a href="#" className={classes.button}>
               Next: About
             </a>
             <a />
           </section> */}
         </nav>
-        <div className={classes.footer__credit}>
+        <div className={classes.credit}>
           <span>Made with <span><FavoriteSharpIcon /></span> by AseelBan</span>
         </div>
       </footer>
-      <div class={classes.footer__MobileNavigation}>
+      <div class={classes.MobileNavigation}>
         <MobileNavigation />
       </div>
     </>

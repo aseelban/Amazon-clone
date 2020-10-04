@@ -18,13 +18,13 @@ function Payment({ classes }) {
   return (
     <>
       <Grid
-        className={classes.Payment__wrapper}
+        className={classes.container}
         container
         direction="column"
         justify="center"
         alignItems="center"
       >
-        <Grid className={classes.Payment__title} item md="12">
+        <Grid className={classes.title} item md="12">
           <StorefrontIcon />
           <Typography
             variant="h5"
@@ -34,7 +34,7 @@ function Payment({ classes }) {
             Checkout
           </Typography>
         </Grid>
-        <div className={classes.Payment__wrapper__children}>
+        <div className={classes.wrapper__children}>
           <PaymentOrder />
           <PaymentUserInfo />
           <PaymentForm />

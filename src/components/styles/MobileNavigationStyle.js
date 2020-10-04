@@ -1,6 +1,6 @@
 
 const styles = {
-  MobileNavigation__wrapper: {
+  container: {
     marginTop: "5rem",
     bottom: 0,
     zIndex: 100,
@@ -11,7 +11,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  MobileNavigation__phone: {
+  phone: {
     border: "2px solid #eee",
     position: "relative",
     height: 0,
@@ -22,7 +22,7 @@ const styles = {
     padding: '0.7rem'
 
   },
-  MobileNavigation__nav__icons: {
+  nav__icons: {
 
     "& ul": {
       listStyleType: "none",

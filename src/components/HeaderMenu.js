@@ -76,21 +76,21 @@ function HeaderMenu() {
         <Divider />
 
         {/* login & display user data */}
-        <div className={classes.HeaderMenu__msg}>
+        <div className={classes.msg}>
           {/* <AccountCircleOutlinedIcon /> */}
           <AccountCircleIcon />
           <Typography variant="subtitle1" gutterBottom>
-            <span>Hello</span>, <span className={classes.HeaderMenu__msg__name}>{user ? user.email : "Guset"}</span>
+            <span>Hello</span>, <span className={classes.msg__name}>{user ? user.email : "Guset"}</span>
           </Typography>
         </div>
-        <div className={classes.HeaderMenu__login}>
+        <div className={classes.login}>
           <Link
-            className={classes.HeaderMenu__login__link}
+            className={classes.login__link}
             to={!user && "/login"}
           >
             <div onClick={handleAuthentication}>
               <Typography
-                className={classes.HeaderMenu__login__text}
+                className={classes.login__text}
                 variant="body1"
                 gutterBottom
               >
@@ -101,35 +101,35 @@ function HeaderMenu() {
         </div>
 
         {/* order */}
-        <div className={classes.HeaderMenu__orders}>
+        <div className={classes.orders}>
           <Typography variant="subtitle1" gutterBottom>
             Return &Orders
           </Typography>
         </div>
-        <div className={classes.HeaderMenu__prime}>
+        <div className={classes.prime}>
           <Typography variant="subtitle1" gutterBottom>
             Your Prime
           </Typography>
         </div>
 
         {/* checkout */}
-        <Link className={classes.HeaderMenu__checkout__link} to="/checkout">
-          <div className={classes.HeaderMenu__checkout}>
+        <Link className={classes.checkout__link} to="/checkout">
+          <div className={classes.checkout}>
             <LocalMallOutlinedIcon />
-            <span className={classes.HeaderMenu__basketCount}>
+            <span className={classes.basketCount}>
               {basket?.length}
             </span>
           </div>
         </Link>
 
         {/* search bar */}
-        <Grid className={classes.header__search} item md={7}>
+        <Grid className={classes.search} item md={7}>
           <input
             placeholder="Saerch for proudct..."
-            className={classes.header__searchInput}
+            className={classes.searchInput}
             type="text"
           />
-          <SearchIcon className={classes.header__searchIcon} />
+          <SearchIcon className={classes.searchIcon} />
         </Grid>
       </Drawer>
     </div>

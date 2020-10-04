@@ -1,7 +1,7 @@
 import breakpoints from "./breakpoints";
 
 const styles = {
-  footer__wrapper: {
+  wrapper: {
     backgroundColor: "#232F3E",
     fontFamily: "Lato, sans-serif",
     padding: "50px 0 7px 0",
@@ -64,7 +64,7 @@ const styles = {
       display: "none",
     },
   },
-  footer__inner: {
+  inner: {
     display: 'flex',
     justifyContent: 'space-evenly',
     width: "90%",
@@ -84,7 +84,7 @@ const styles = {
       },
     },
   },
-  footer__item: {
+  item: {
     float: "left",
     margin: "0 7.2% 0 0",
 
@@ -133,11 +133,11 @@ const styles = {
       width: "50%",
     },
   },
-  footer__color: {
+  color: {
     color: "white",
     fontWeight: 400,
   },
-  footer__button: {
+  button: {
     color: "white",
     position: "relative",
     fontWeight: 400,
@@ -147,7 +147,7 @@ const styles = {
     padding: 14,
 
   },
-  footer__credit: {
+  credit: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -162,7 +162,7 @@ const styles = {
       color: '#e80e0e',
     }
   },
-  footer__MobileNavigation:{
+  MobileNavigation:{
     [breakpoints.up("sm")]: {
       display: "none",
     },

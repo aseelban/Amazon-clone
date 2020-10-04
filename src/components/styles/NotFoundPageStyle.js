@@ -1,7 +1,7 @@
 import breakpoints from "./breakpoints";
 
 const styles = {
-  NotFoundPage__container: {
+  container: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

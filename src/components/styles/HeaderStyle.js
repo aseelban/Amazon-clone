@@ -2,7 +2,7 @@ import breakpoints from "./breakpoints";
 const mainColors = { header_bg_color: "#131921", icon_bg_color: "#f3a847" };
 
 const styles = {
-  header: {
+  container: {
     display: "flex",
     backgroundColor: mainColors.header_bg_color,
     alignItems: "center",
@@ -15,7 +15,7 @@ const styles = {
       textDecoration: 'none',
     }
   },
-  header__logo: {
+  logo: {
     width: 100,
     objectFit: "contain",
     marginLeft: 20,
@@ -23,7 +23,7 @@ const styles = {
     marginTop: 18,
   },
 
-  header__search: {
+  search: {
     display: "flex",
     flex: "1 1",
     [breakpoints.down("md")]: {
@@ -31,7 +31,7 @@ const styles = {
     },
   },
 
-  header__searchInput: {
+  searchInput: {
     height: 12,
     padding: 11,
     border: "none",
@@ -41,7 +41,7 @@ const styles = {
     height: '1.6rem !important'
   },
   
-  header__searchIcon: {
+  searchIcon: {
     padding: 2,
     height: "22px !important",
     backgroundColor: mainColors.icon_bg_color,
@@ -51,7 +51,7 @@ const styles = {
 
   },
 
-  header__nav: {
+  nav: {
     display: "flex",
     justifyContent: "space-evenly",
 
@@ -59,7 +59,7 @@ const styles = {
       display: "none",
     },
   },
-  header__nav__toggle: {
+  nav__toggle: {
     display: "none",
 
     [breakpoints.down("md")]: {
@@ -69,7 +69,7 @@ const styles = {
     },
   },
 
-  header__option: {
+  option: {
     display: "flex",
     flexDirection: "column",
     color: "#fff",
@@ -77,27 +77,27 @@ const styles = {
     marginRight: 14,
   },
 
-  header__optionLineOne: {
+  optionLineOne: {
     fontSize: 11,
   },
 
-  header__optionLineTwo: {
+  optionLineTwo: {
     fontSize: 13,
     fontWeight: 700,
   },
 
-  header__optionBasket: {
+  optionBasket: {
     display: "flex",
     alignItems: "center",
     color: "#fff",
     padding: "0.2rem",
     marginRight: 10,
   },
-  header__optionLineTwo: {
+  optionLineTwo: {
     fontSize: 13,
     fontWeight: 700,
   },
-  header__basketCount: {
+  basketCount: {
     margin: "0 10px",
     fontSize: 15,
   },

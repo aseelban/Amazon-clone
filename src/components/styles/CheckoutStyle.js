@@ -7,7 +7,7 @@ const styles = {
       marginBottom: "7rem",
     },
   },
-  checkout__wrapper__ad__subtotal: {
+  wrapper__ad__subtotal: {
     [breakpoints.down("sm")]: {
       justifyContent: "center",
     },
@@ -19,13 +19,13 @@ const styles = {
     textAlign: "center",
     whiteSpace: "nowrap",
   },
-  checkout__list: {
+  list: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
     marginLeft: "2rem",
   },
-  checkout__list__product: {
+  list__product: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -40,7 +40,7 @@ const styles = {
   chekout__left: {
     // backgroundColor: "#fff",
   },
-  checkout__left__title: {
+  left__title: {
     margin: "1rem 0",
     borderBottom: "1px solid #d7d7d7",
     padding: "1rem 0.2rem",
@@ -48,7 +48,7 @@ const styles = {
       fontSize: 12,
     },
   },
-  checkout__img_ad: {
+  img_ad: {
     width: "100%",
     borderRadius: 5,
     boxShadow:

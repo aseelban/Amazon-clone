@@ -1,15 +1,15 @@
 const styles = {
-  PaymentOrder__wrapper: {
+  container: {
     margin: "3rem 0 2rem 0",
   },
-  PaymentOrder__wrapper__title: {
+  wrapper__title: {
     marginBottom: '2rem',
   },
   PaymentForm__items: {
     display: "flex",
     // flexDirction: 'column'
   },
-  PaymentOrder__wrapper__list: {
+  wrapper__list: {
     "& li": {
       display: "flex",
       justifyContent: "space-between",
@@ -19,10 +19,10 @@ const styles = {
       borderRadius: 5,
     },
   },
-  PaymentOrder__key: {
+  key: {
     marginRight: '3rem',
   },
-  PaymentOrder__vat: {
+  vat: {
     color: 'rgb(126, 133, 155)',
     fontSize: '0.9rem',
   }

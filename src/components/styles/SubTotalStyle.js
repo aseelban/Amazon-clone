@@ -24,12 +24,12 @@ const styles = {
       fontSize: 12,
     },
   },
-  subtotal__items: {
+  items: {
     display: "inline-block",
     marginRight: "5px",
     fontSize: 16,
   },
-  subtotal__price: {
+  price: {
     fontWeight: "600",
     fontSize: 16,
   },

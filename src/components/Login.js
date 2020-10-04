@@ -52,22 +52,8 @@ function Login({ classes }) {
       .catch((error) => setIslogged(true));
   };
 
-  // const register = (e) => {
-  //   e.preventDefault();
-
-  //   auth
-  //     .createUserWithEmailAndPassword(email, password)
-  //     .then((auth) => {
-  //       // it successfully created a new user with email and password
-  //       if (auth) {
-  //         history.push("/");
-  //       }
-  //     })
-  //     .catch((error) => alert(error.message));
-  // };
-
   return (
-    <div className={classes.Login__wrapper}>
+    <div className={classes.container}>
       <Grid
         container
         spacing={1}
@@ -75,14 +61,14 @@ function Login({ classes }) {
         justify="center"
         alignItems="stretch"
       >
-        <Grid className={classes.Login__image__wrapper} item xs="12">
+        <Grid className={classes.image__wrapper} item xs="12">
           <Link to="/">
-            <img className={classes.Login__logo} src={logo} />
+            <img className={classes.logo} src={logo} />
           </Link>
         </Grid>
         <Grid item xs="12">
-          <div className={classes.Login__form__wrapper}>
-            <h3 className={classes.Login__form__title}>Sign-in</h3>
+          <div className={classes.form__wrapper}>
+            <h3 className={classes.form__title}>Sign-in</h3>
             <FormControl>
               {/* <div > */}
               <TextField
@@ -92,7 +78,7 @@ function Login({ classes }) {
                 variant="outlined"
                 size="small"
                 marginNormal
-                className={classes.Login__email__form}
+                className={classes.email__form}
                 onChange={handleEmail}
               />
               <TextField
@@ -102,20 +88,20 @@ function Login({ classes }) {
                 variant="outlined"
                 size="small"
                 marginNormal
-                className={classes.Login__password__form}
+                className={classes.password__form}
                 onChange={handlePassword}
                 type={"password"}
               />
               <Button
                 variant="contained"
                 size="small"
-                className={classes.Login__submit__form}
+                className={classes.submit__form}
                 onClick={signIn}
               >
                 Login
               </Button>
             </FormControl>
-              <div className={classes.Login__error__msg}>
+              <div className={classes.error__msg}>
                 {isLogged && (
                   <Collapse in={open}>
                     <Alert
@@ -139,14 +125,14 @@ function Login({ classes }) {
                   </Collapse>
                 )}
               </div>
-            <p className={classes.Login__legalText}>
+            <p className={classes.legalText}>
               By continuing, you agree to Amazon's Conditions of Use and Privacy
               Notice.
             </p>
           </div>
-          <div className={classes.Login__singup__wrapper}>
+          <div className={classes.singup__wrapper}>
             <Typography
-              className={classes.Login__singup__text}
+              className={classes.singup__text}
               color="textSecondary"
               variant="body2"
             >
@@ -158,7 +144,7 @@ function Login({ classes }) {
               variant="contained"
               size="small"
               color="defualt"
-              className={classes.Login__signup__button}
+              className={classes.signup__button}
             >
               Create your Amazon account
             </Button>

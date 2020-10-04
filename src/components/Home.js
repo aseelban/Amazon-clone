@@ -11,9 +11,9 @@ function Home({ classes }) {
     document.title = "AmazonClone - Home";
   }, []);
   return (
-    <div className={classes.home}>
-      <div className={classes.home__container}>
-        <img className={classes.home__image} src={prime_background} />
+    <div className={classes.container}>
+      <div>
+        <img className={classes.image} src={prime_background} />
       </div>
       {/* 
       - Discover section 
@@ -33,14 +33,14 @@ function Home({ classes }) {
           <Typography
             variant="h6"
             gutterBottom
-            className={classes.Home__product__title}
+            className={classes.product__title}
           >
             Discover Amazon
           </Typography>
         </Grid>
         {/* list Discover */}
         <Grid
-          className={classes.home__wrapper__discover}
+          className={classes.wrapper__discover}
           container
           direction="row"
           justify="center"
@@ -69,14 +69,14 @@ function Home({ classes }) {
           <Typography
             variant="h6"
             gutterBottom
-            className={classes.Home__product__title}
+            className={classes.product__title}
           >
             Popular right now
           </Typography>
         </Grid>
       </Grid>
       {/* list products */}
-      <Grid className={classes.Home__wrapper__ProductsList} container direction="row" justify="center" alignItems="center">
+      <Grid className={classes.wrapper__ProductsList} container direction="row" justify="center" alignItems="center">
         <Grid item xs={12}>
           <ProductList />
         </Grid>

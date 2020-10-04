@@ -54,13 +54,13 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginRight: 0,
   },
-  header__search: {
+  search: {
     display: "flex",
     flex: "1 1",
     marginTop: "1rem",
   },
 
-  header__searchInput: {
+  searchInput: {
     height: 6,
     padding: "12.5px",
     border: "none",
@@ -70,14 +70,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#d7d7d75e",
   },
 
-  header__searchIcon: {
+  searchIcon: {
     padding: 4,
     height: "25px !important",
     backgroundColor: mainColors.icon_bg_color,
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
   },
-  HeaderMenu__msg: {
+  msg: {
     display: "flex",
     padding: "1rem 0.5rem",
     background: "#232F3E",
@@ -93,18 +93,18 @@ const useStyles = makeStyles((theme) => ({
       margin: "0 8px 0 5px",
     },
   },
-  HeaderMenu__msg__name: {
+  msg__name: {
     fontWeight: 600,
     fontSize: 16,
   },
-  HeaderMenu__login: {
+  login: {
     margin: "0 0.5rem",
   },
-  HeaderMenu__login__link: {
+  login__link: {
     textDecoration: "none",
     color: "#e08929",
   },
-  HeaderMenu__login__text: {
+  login__text: {
     display: "flex",
     justifyContent: "flex-start",
     alignContent: "center",
@@ -114,20 +114,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  HeaderMenu__orders: {
+  orders: {
     margin: "0 0.5rem",
   },
-  HeaderMenu__prime: {
+  prime: {
     margin: "0 0.5rem",
   },
 
-  HeaderMenu__checkout: {
+  checkout: {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
     color: "#000",
   },
-  HeaderMenu__checkout__link: {
+  checkout__link: {
     textDecoration: "none",
     background: "#f0f0f0",
     padding: "1rem",

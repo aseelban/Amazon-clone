@@ -22,14 +22,14 @@ function Checkout({ classes }) {
         direction="row"
         justify="flex-start"
         alignItems="center"
-        className={classes.checkout__wrapper__ad__subtotal}
+        className={classes.wrapper__ad__subtotal}
       >
         <Grid className={classes.chekout__left} item xs={11} md={7} lg={7}>
           {/* 
              ad banner
          */}
           <div className="chekout__ad">
-            <img className={classes.checkout__img_ad} src={amazon_banner} />
+            <img className={classes.img_ad} src={amazon_banner} />
           </div>
         </Grid>
         {/* 
@@ -48,15 +48,15 @@ function Checkout({ classes }) {
         {/* 
             shopping list items
         */}
-        <Grid className={classes.checkout__list} item xs={12} md={8}>
-          <div className={classes.checkout__left__title}>
+        <Grid className={classes.list} item xs={12} md={8}>
+          <div className={classes.left__title}>
             <h2>Your shopping list:</h2>
           </div>
         </Grid>
         {/* 
             render the checkout list items:
         */}
-        <Grid className={classes.checkout__list__product} item xs={12} md={8}>
+        <Grid className={classes.list__product} item xs={12} md={8}>
           {basket.map((product, i) => (
             <CheckoutProduct
               key={i}

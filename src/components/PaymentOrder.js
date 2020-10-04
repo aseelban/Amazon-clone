@@ -13,13 +13,13 @@ function PaymentOrder({ classes }) {
 
   return (
     <Grid
-      className={classes.PaymentOrder__wrapper}
+      className={classes.container}
       container
       direction="column"
       justify="center"
       alignItems="center"
     >
-      <Grid className={classes.PaymentOrder__wrapper__title} item md="12">
+      <Grid className={classes.wrapper__title} item md="12">
         <Typography
           variant="h6"
           className="PaymentForm__title"
@@ -30,19 +30,19 @@ function PaymentOrder({ classes }) {
         </Typography>
       </Grid>
       <Grid item md="12">
-        <ul className={classes.PaymentOrder__wrapper__list}>
+        <ul className={classes.wrapper__list}>
           <li>
-            <span className={classes.PaymentOrder__key}>Subtotal <span className={classes.PaymentOrder__vat}>(Inclusive of VAT)
+            <span className={classes.key}>Subtotal <span className={classes.vat}>(Inclusive of VAT)
 </span></span>
-            <span className={classes.PaymentOrder__val}>${getBasketTotal(basket)}</span>
+            <span className={classes.val}>${getBasketTotal(basket)}</span>
           </li>
           <li>
-            <span className={classes.PaymentOrder__key}>Total Items</span>
-            <span className={classes.PaymentOrder__val}>{basket?.length}</span>
+            <span className={classes.key}>Total Items</span>
+            <span className={classes.val}>{basket?.length}</span>
           </li>
           <li>
-            <span className={classes.PaymentOrder__key}>Shipping Fee</span>
-            <span className={classes.PaymentOrder__val}>Free</span>
+            <span className={classes.key}>Shipping Fee</span>
+            <span className={classes.val}>Free</span>
           </li>
         </ul>
       </Grid>

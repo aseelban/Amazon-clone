@@ -22,7 +22,7 @@ const Header = ({ classes }) => {
 
   return (
     <Grid
-      className={classes.header}
+      className={classes.container}
       container
       direction="row"
       justify="space-between"
@@ -31,49 +31,49 @@ const Header = ({ classes }) => {
       <Grid item xs={10} md={1}>
         {/* logo */}
         <Link to="/">
-          <img className={classes.header__logo} src={logo} />
+          <img className={classes.logo} src={logo} />
         </Link>
       </Grid>
       {/* search bar */}
-      <Grid className={classes.header__search} item xs={0} md={7}>
-        <input placeholder="Search for product" className={classes.header__searchInput} type="text" />
-        <SearchIcon className={classes.header__searchIcon} />
+      <Grid className={classes.search} item xs={0} md={7}>
+        <input placeholder="Search for product" className={classes.searchInput} type="text" />
+        <SearchIcon className={classes.searchIcon} />
       </Grid>
 
       {/* toggle menu "mobile" */}
-      <Grid className={classes.header__nav__toggle} item xs={2}>
+      <Grid className={classes.nav__toggle} item xs={2}>
         <HeaderMenu />
       </Grid>
 
       {/* nav item */}
-      <Grid className={classes.header__nav} item xs={0} md={3}>
+      <Grid className={classes.nav} item xs={0} md={3}>
         <Link to={!user && "/login"}>
           <div
             onClick={handleAuthentication}
-            className={classes.header__option}
+            className={classes.option}
           >
-            <span className={classes.header__optionLineOne}>
+            <span className={classes.optionLineOne}>
               Hello {user ? user.email : "Guset"}
             </span>
-            <span className={classes.header__optionLineTwo}>
+            <span className={classes.optionLineTwo}>
               {user ? "Sign Out" : "Sign In"}
             </span>
           </div>
         </Link>
-        <div className={classes.header__option}>
-          <span className={classes.header__optionLineOne}>Returns</span>
-          <span className={classes.header__optionLineTwo}>& Orders</span>
+        <div className={classes.option}>
+          <span className={classes.optionLineOne}>Returns</span>
+          <span className={classes.optionLineTwo}>& Orders</span>
         </div>
-        <div className={classes.header__option}>
-          <span className={classes.header__optionLineOne}>Your</span>
-          <span className={classes.header__optionLineTwo}>Prime</span>
+        <div className={classes.option}>
+          <span className={classes.optionLineOne}>Your</span>
+          <span className={classes.optionLineTwo}>Prime</span>
         </div>
         <Link to="/checkout">
-          <div className={classes.header__optionBasket}>
+          <div className={classes.optionBasket}>
             <LocalMallOutlinedIcon />
             <span
               className={
-                (classes.header__optionLineTwo, classes.header__basketCount)
+                (classes.optionLineTwo, classes.basketCount)
               }
             >
               {basket?.length}
