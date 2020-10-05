@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useStateValue } from "../context/StateProvider";
 import data from "../API/product.json";
 import { useParams } from "react-router-dom";
-import "./styles/ProductPageStyle.css";
+import { withStyles } from "@material-ui/styles";
+import styles from './styles/ProductPageStyle'
 import { Rating } from "@material-ui/lab";
 import { Snackbar } from "@material-ui/core";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
@@ -10,7 +11,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import ShareIcon from "@material-ui/icons/Share";
 
-function ProductPage() {
+function ProductPage({classes}) {
   const [{}, dispatch] = useStateValue();
   const { productID } = useParams();
   const [product, setProduct] = useState([]);
@@ -61,20 +62,20 @@ function ProductPage() {
 
   return (
     <>
-      <div class="ProductPage__container">
-        <div class="ProductPage__product-image">
-          <img src={product.image} alt="" class="ProductPage__product-pic" />
+      <div className={classes.ProductPage__container}>
+        <div className={classes.ProductPage__product__image}>
+          <img src={product.image} alt="" className={classes.ProductPage__product__pic} />
         </div>
 
-        <div class="ProductPage__product-details">
+        <div className={classes.ProductPage__product__details}>
           <header>
-            <h1 class="ProductPage__title">{product.title}</h1>
-            <span class="ProductPage__colorCat">{product.brand}</span>
-            <div class="ProductPage__newPrice">
-              <span class="ProductPage__oldPrice">${product.oldPrice}</span>
-              <span class="ProductPage__current">${product.price}</span>
+            <h1 className={classes.ProductPage__title}>{product.title}</h1>
+            <span className={classes.ProductPage__colorCat}>{product.brand}</span>
+            <div className={classes.ProductPage__newPrice}>
+              <span className={classes.ProductPage__oldPrice}>${product.oldPrice}</span>
+              <span className={classes.ProductPage__current}>${product.price}</span>
             </div>
-            <div class="ProductPage__rate">
+            <div className={classes.ProductPage__rate}>
               <Rating
                 name="read-only"
                 value={parseInt(product.rating)}
@@ -86,7 +87,7 @@ function ProductPage() {
             <h5>Description</h5>
             <p>{product.des}</p>
           </article>
-          <div class="ProductPage__footer">
+          <div className={classes.ProductPage__footer}>
             <button
               type="button"
               onClick={handleClick({ vertical: "top", horizontal: "right" })}
@@ -94,35 +95,35 @@ function ProductPage() {
               <AddShoppingCartIcon />
               <span>add to cart</span>
             </button>
-            <a href="#!" class="share" >
+            <a href="#!" className={classes.share}>
               <ShareIcon />
             </a>
           </div>
         </div>
-      </div>
-      <div class="snakerbar__wrapper">
-        <Snackbar
-          anchorOrigin={{ vertical, horizontal }}
-          autoHideDuration={9000}
-          open={open}
-          onClose={handleClose}
-          message={SnakebarMsg}
-          key={vertical + horizontal}
-          action={
-            <React.Fragment>
-              <IconButton
-                aria-label="close"
-                color="inherit"
-                onClick={handleClose}
-              >
-                <CloseIcon />
-              </IconButton>
-            </React.Fragment>
-          }
-        />
+        <div className={classes.snakerbar__wrapper}>
+          <Snackbar
+            anchorOrigin={{ vertical, horizontal }}
+            autoHideDuration={9000}
+            open={open}
+            onClose={handleClose}
+            message={SnakebarMsg}
+            key={vertical + horizontal}
+            action={
+              <React.Fragment>
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  onClick={handleClose}
+                >
+                  <CloseIcon />
+                </IconButton>
+              </React.Fragment>
+            }
+          />
+        </div>
       </div>
     </>
   );
 }
 
-export default ProductPage;
+export default withStyles(styles)(ProductPage);
