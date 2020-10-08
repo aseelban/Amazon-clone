@@ -1,7 +1,10 @@
-const styles = {
+import { makeStyles } from "@material-ui/core/styles";
+import { createUseStyles } from "react-jss";
+
+const useStyles = createUseStyles({
   container: {
     height: "100%",
-    marginBottom: '2rem',
+    marginBottom: "2rem",
   },
   PaymentV2__cardNum: {
     "& input": {
@@ -30,21 +33,19 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     padding: "1rem 2rem",
-    background: "#e1e3e3",
+    background: "#F7F7F7",
     borderRadius: 5,
     position: "relative",
     top: "0.9rem",
   },
   wrapper__children: {
     backgroundColor: "#d7d7d77a",
-    padding: '1.5rem 0 3rem 0',
-    WebkitBoxShadow: '13px 15px 10px -6px rgba(153,153,153,0.6)',
+    padding: "1.5rem 0 3rem 0",
+    WebkitBoxShadow: "13px 15px 10px -6px rgba(153,153,153,0.6)",
     MozBoxShadow: "13px 15px 10px -6px rgba(153,153,153,0.6)",
     boxShadow: "13px 15px 10px -6px rgba(153,153,153,0.6)",
     borderRadius: 6,
-
   },
+});
 
-};
-
-export default styles;
+export default useStyles;

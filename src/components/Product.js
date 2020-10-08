@@ -1,12 +1,13 @@
 import React from "react";
 import { useStateValue } from "../context/StateProvider";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/ProductStyle";
+import useStyles from "./styles/ProductStyle";
 import { Link } from 'react-router-dom'
 
 
-function Product({ classes, id, title, image, oldPrice, price, rating }) {
+function Product({id, title, image, oldPrice, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
+  const classes = useStyles();
+
 
   const productdata = [id, title, image, oldPrice, price, rating];
 
@@ -46,4 +47,4 @@ function Product({ classes, id, title, image, oldPrice, price, rating }) {
   );
 }
 
-export default withStyles(styles) (Product);
+export default Product;

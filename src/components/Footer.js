@@ -1,25 +1,16 @@
 import React from "react";
 import MobileNavigation from "./MobileNavigation";
-import { withStyles } from "@material-ui/styles";
 import FavoriteSharpIcon from '@material-ui/icons/FavoriteSharp';
-import styles from "./styles/FooterStyle";
+import useStyles from "./styles/FooterStyle";
 
-function Footer({ classes }) {
+function Footer() {
+  const classes = useStyles();
+
+  
   return (
     <>
       <footer className={classes.wrapper}>
         <nav className={classes.inner}>
-          {/* <section className={classes.item}>
-            <h1>LOGO</h1>
-
-            <h2>
-              We create possibilities <br />
-              for the connected world.
-              <br />
-              <b className={classes.color}>Be Bold.</b>
-            </h2>
-          </section> */}
-
           <section className={classes.item}>
             <h3>Get to Know Us</h3>
             <ul>
@@ -136,4 +127,4 @@ function Footer({ classes }) {
   );
 }
 
-export default withStyles(styles)(Footer);
+export default Footer;

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { auth, db } from "../firebase";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/SignupStyle";
+import useStyles from "./styles/SignupStyle";
 import Grid from "@material-ui/core/Grid";
 import logo from "./img/amazon_logo_login.png";
 import {
@@ -15,13 +14,15 @@ import {
 import Alert from "@material-ui/lab/Alert";
 import CloseIcon from "@material-ui/icons/Close";
 
-function Signup({ classes }) {
+function Signup() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSigned, setISigned] = useState(false);
   const [open, setOpen] = React.useState(true);
   const history = useHistory();
+  const classes = useStyles();
+
 
   useEffect(() => {
     document.title = "AmazonClone - Sign up";
@@ -140,4 +141,4 @@ function Signup({ classes }) {
   );
 }
 
-export default withStyles(styles)(Signup);
+export default Signup;

@@ -1,22 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { createUseStyles } from "react-jss";
 const drawerWidth = 240;
 const mainColors = { header_bg_color: "#131921", icon_bg_color: "#f3a847" };
 
-const useStyles = makeStyles((theme) => ({
-  appBar: {
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginRight: drawerWidth,
-  },
+const useStyles = createUseStyles({
   title: {
     flexGrow: 1,
   },
@@ -33,26 +20,12 @@ const useStyles = makeStyles((theme) => ({
   drawerHeader: {
     display: "flex",
     alignItems: "center",
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
     justifyContent: "flex-start",
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+    // padding: theme.spacing(3),
     marginRight: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginRight: 0,
   },
   search: {
     display: "flex",
@@ -133,6 +106,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "1rem",
     fontSize: "1.3rem",
   },
-}));
+});
 
 export default useStyles;

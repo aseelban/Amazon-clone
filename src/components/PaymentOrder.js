@@ -1,12 +1,12 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/PaymentOrderStyle";
+import useStyles from "./styles/PaymentOrderStyle";
 import { useStateValue } from "../context/StateProvider";
 import { getBasketTotal } from "../context/reducer";
 
-function PaymentOrder({ classes }) {
+function PaymentOrder() {
   const [{ basket }] = useStateValue();
+  const classes = useStyles();
 
   return (
     <Grid
@@ -48,4 +48,4 @@ function PaymentOrder({ classes }) {
   );
 }
 
-export default withStyles(styles)(PaymentOrder);
+export default PaymentOrder;

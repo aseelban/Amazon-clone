@@ -15,7 +15,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../context/StateProvider";
@@ -79,14 +79,14 @@ function HeaderMenu() {
           {/* <AccountCircleOutlinedIcon /> */}
           <AccountCircleIcon />
           <Typography variant="subtitle1" gutterBottom>
-            <span>Hello</span>, <span className={classes.msg__name}>{user ? user.email : "Guset"}</span>
+            <span>Hello</span>,{" "}
+            <span className={classes.msg__name}>
+              {user ? user.email : "Guset"}
+            </span>
           </Typography>
         </div>
         <div className={classes.login}>
-          <Link
-            className={classes.login__link}
-            to={!user && "/login"}
-          >
+          <Link className={classes.login__link} to={!user && "/login"}>
             <div onClick={handleAuthentication}>
               <Typography
                 className={classes.login__text}
@@ -115,24 +115,12 @@ function HeaderMenu() {
         <Link className={classes.checkout__link} to="/checkout">
           <div className={classes.checkout}>
             <LocalMallOutlinedIcon />
-            <span className={classes.basketCount}>
-              {basket?.length}
-            </span>
+            <span className={classes.basketCount}>{basket?.length}</span>
           </div>
         </Link>
-
-        {/* search bar */}
-        <Grid className={classes.search} item md={7}>
-          <input
-            placeholder="Saerch for proudct..."
-            className={classes.searchInput}
-            type="text"
-          />
-          <SearchIcon className={classes.searchIcon} />
-        </Grid>
       </Drawer>
     </div>
   );
 }
 
-export default withStyles(useStyles)(HeaderMenu);
+export default HeaderMenu;

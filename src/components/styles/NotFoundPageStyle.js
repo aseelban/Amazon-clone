@@ -1,6 +1,8 @@
+import { makeStyles } from "@material-ui/core/styles";
+import { createUseStyles } from "react-jss";
 import breakpoints from "./breakpoints";
 
-const styles = {
+const useStyles = createUseStyles({
   container: {
     display: "flex",
     flexDirection: "column",
@@ -66,6 +68,6 @@ const styles = {
       },
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

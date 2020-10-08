@@ -1,6 +1,8 @@
+import { makeStyles } from "@material-ui/core/styles";
+import { createUseStyles } from "react-jss";
 import breakpoints from "./breakpoints";
 
-const styles = {
+const useStyles = createUseStyles({
   wrapper: {
     backgroundColor: "#232F3E",
     fontFamily: "Lato, sans-serif",
@@ -58,15 +60,15 @@ const styles = {
       color: "#d1d1d1",
     },
     [breakpoints.down("xg")]: {
-      padding: "50px 0 70px 0 !important",
+      padding: "45px 0 3px 0 !important",
     },
     [breakpoints.down("sm")]: {
       display: "none",
     },
   },
   inner: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
+    display: "flex",
+    justifyContent: "space-evenly",
     width: "90%",
     marginLeft: "auto",
     marginRight: "auto",
@@ -75,8 +77,7 @@ const styles = {
 
     [breakpoints.down("xg")]: {
       borderBottom: "1px solid #333",
-      paddingBottom: 490,
-      marginBottom: 50,
+      // marginBottom: 50,
     },
     "& hover": {
       [breakpoints.down("xg")]: {
@@ -145,28 +146,27 @@ const styles = {
     transition: "1s",
     transitionDelay: ".2s",
     padding: 14,
-
   },
   credit: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: '2rem',
-    borderTop: '1px solid #69696991',
-    padding: '1rem 0',
-    color: '#cecece',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "2rem",
+    borderTop: "1px solid #69696991",
+    padding: "1rem 0",
+    color: "#cecece",
     fontSize: 13,
 
-    "& svg":{
+    "& svg": {
       fontSize: 14,
-      color: '#e80e0e',
-    }
+      color: "#e80e0e",
+    },
   },
-  MobileNavigation:{
+  MobileNavigation: {
     [breakpoints.up("sm")]: {
       display: "none",
     },
-  }
-};
+  },
+});
 
-export default styles;
+export default useStyles;

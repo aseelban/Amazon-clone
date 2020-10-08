@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useStateValue } from "../context/StateProvider";
 import data from "../API/product.json";
 import { useParams } from "react-router-dom";
-import { withStyles } from "@material-ui/styles";
-import styles from './styles/ProductPageStyle'
+import useStyles from "./styles/ProductPageStyle";
 import { Rating } from "@material-ui/lab";
 import { Snackbar } from "@material-ui/core";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
@@ -11,7 +10,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import ShareIcon from "@material-ui/icons/Share";
 
-function ProductPage({classes}) {
+function ProductPage() {
   const [{}, dispatch] = useStateValue();
   const { productID } = useParams();
   const [product, setProduct] = useState([]);
@@ -20,6 +19,7 @@ function ProductPage({classes}) {
     open: false,
     vertical: "top",
   });
+  const classes = useStyles();
 
   const { vertical, horizontal, open } = state;
 
@@ -64,16 +64,26 @@ function ProductPage({classes}) {
     <>
       <div className={classes.ProductPage__container}>
         <div className={classes.ProductPage__product__image}>
-          <img src={product.image} alt="" className={classes.ProductPage__product__pic} />
+          <img
+            src={product.image}
+            alt=""
+            className={classes.ProductPage__product__pic}
+          />
         </div>
 
         <div className={classes.ProductPage__product__details}>
           <header>
             <h1 className={classes.ProductPage__title}>{product.title}</h1>
-            <span className={classes.ProductPage__colorCat}>{product.brand}</span>
+            <span className={classes.ProductPage__colorCat}>
+              {product.brand}
+            </span>
             <div className={classes.ProductPage__newPrice}>
-              <span className={classes.ProductPage__oldPrice}>${product.oldPrice}</span>
-              <span className={classes.ProductPage__current}>${product.price}</span>
+              <span className={classes.ProductPage__oldPrice}>
+                ${product.oldPrice}
+              </span>
+              <span className={classes.ProductPage__current}>
+                ${product.price}
+              </span>
             </div>
             <div className={classes.ProductPage__rate}>
               <Rating
@@ -95,7 +105,7 @@ function ProductPage({classes}) {
               <AddShoppingCartIcon />
               <span>add to cart</span>
             </button>
-            <a href="#!" className={classes.share}>
+            <a className={classes.share}>
               <ShareIcon />
             </a>
           </div>
@@ -126,4 +136,4 @@ function ProductPage({classes}) {
   );
 }
 
-export default withStyles(styles)(ProductPage);
+export default ProductPage;

@@ -1,6 +1,7 @@
+import { createUseStyles } from "react-jss";
 import breakpoints from "./breakpoints";
 
-const styles = {
+const useStyles = createUseStyles({
   ProductPage__container: {
     backgroundColor: "whitesmoke",
     height: "100%",
@@ -29,11 +30,7 @@ const styles = {
       textDecoration: "none",
       color: "#bbb",
     },
-    "& .snakerbar__wrapper": {
-      "& .MuiPaper-root": {
-        backgroundColor: "#537290e3 !important",
-      },
-    },
+
     [breakpoints.up("customX")]: {
       display: "flex",
       flexDirection: "row",
@@ -43,6 +40,11 @@ const styles = {
     },
     [breakpoints.down("sm")]: {
       flexDirection: "column",
+    },
+  },
+  snakerbar__wrapper: {
+    "& .MuiSnackbarContent-root": {
+      backgroundColor: "#132338b5 !important",
     },
   },
   ProductPage__product__image: {
@@ -172,5 +174,6 @@ const styles = {
       color: "#909090",
     },
   },
-};
-export default styles;
+});
+
+export default useStyles;

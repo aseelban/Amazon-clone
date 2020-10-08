@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/LoginStyle";
+import useStyles from "./styles/LoginStyle";
 import Grid from "@material-ui/core/Grid";
 import logo from "./img/amazon_logo_login.png";
 import {
@@ -18,7 +17,9 @@ import Alert from "@material-ui/lab/Alert";
 import CloseIcon from "@material-ui/icons/Close";
 
 
-function Login({ classes }) {
+function Login() {
+  const classes = useStyles();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogged, setIslogged] = useState(false);
@@ -155,4 +156,4 @@ function Login({ classes }) {
   );
 }
 
-export default withStyles(styles)(Login);
+export default Login;

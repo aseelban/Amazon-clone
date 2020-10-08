@@ -1,7 +1,8 @@
+import { createUseStyles } from "react-jss";
 import breakpoints from "./breakpoints";
 const mainColors = { header_bg_color: "#131921", icon_bg_color: "#f3a847" };
 
-const styles = {
+const useStyles = createUseStyles({
   container: {
     display: "flex",
     backgroundColor: mainColors.header_bg_color,
@@ -10,10 +11,11 @@ const styles = {
     position: "sticky",
     top: 0,
     zIndex: 100,
+    alignItems: 'center',
 
     "& a": {
-      textDecoration: 'none',
-    }
+      textDecoration: "none",
+    },
   },
   logo: {
     width: 100,
@@ -38,17 +40,16 @@ const styles = {
     width: "100%",
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
-    height: '1.6rem !important'
+    height: "1.6rem !important",
   },
-  
+
   searchIcon: {
     padding: 2,
     height: "22px !important",
     backgroundColor: mainColors.icon_bg_color,
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
-    height: '1.6rem !important'
-
+    height: "1.6rem !important",
   },
 
   nav: {
@@ -101,6 +102,6 @@ const styles = {
     margin: "0 10px",
     fontSize: 15,
   },
-};
+});
 
-export default styles;
+export default useStyles;

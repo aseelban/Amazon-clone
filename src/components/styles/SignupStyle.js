@@ -1,6 +1,13 @@
-const styles = {
+import { makeStyles } from "@material-ui/core/styles";
+import { createUseStyles } from "react-jss";
+
+const useStyles = createUseStyles({
   container: {
     overflow: "hidden",
+    background:
+      "-webkit-linear-gradient(-74deg, rgb(251 251 251), rgb(234 234 234))",
+    background: "linear-gradient(-74deg, rgb(251 251 251), rgb(234 234 234))",
+    height: "100vh",
   },
   image__wrapper: {
     display: "flex",
@@ -21,12 +28,15 @@ const styles = {
     borderRadius: 5,
     marginTop: "-1.5rem",
     padding: "1rem 0 1.2rem 0",
+    border: "1px solid #e4e3e3",
+    boxShadow:
+      "0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)!important",
   },
   form__title: {
-    margin: "0.5rem 0",
+    margin: "0.5rem 0 !important",
   },
   email__form: {
-    margin: "0.5rem",
+    margin: "0.5rem !important",
     color: "#F0C14B",
     "& label.Mui-focused": {
       color: "#000",
@@ -47,7 +57,7 @@ const styles = {
     },
   },
   password__form: {
-    margin: "0.5rem",
+    margin: "0.5rem !important",
     "&:focus": {
       color: "#F0C14B",
     },
@@ -67,8 +77,8 @@ const styles = {
     },
   },
   submit__form: {
-    margin: "0.5rem",
-    backgroundColor: "#F0C14B",
+    margin: "0.5rem 0 !important",
+    backgroundColor: "#F0C14B !important",
     "&:hover": {
       backgroundColor: "#ecd089",
     },
@@ -98,6 +108,6 @@ const styles = {
       backgroundColor: "#fbebeb",
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
-import styles from "./styles/CheckoutStyle";
+import useStyles from "./styles/CheckoutStyle";
 import amazon_banner from "./img/amazon_banner.png";
 import Grid from "@material-ui/core/Grid";
-import { withStyles } from "@material-ui/styles";
 import Subtotal from "./Subtotal";
 import { useStateValue } from "../context/StateProvider";
-import CheckoutProduct from "./CheckoutProduct";
+import CheckoutProducts from "./CheckoutProducts";
 import { Typography } from "@material-ui/core";
 
-function Checkout({ classes }) {
+function Checkout() {
   const [{ basket}, dispatch] = useStateValue();
+  const classes = useStyles();
+
 
   useEffect(() => {
     document.title = "AmazonClone - Cart";
@@ -74,7 +75,7 @@ function Checkout({ classes }) {
         ) : (
           <Grid className={classes.list__product} item xs={12} md={8}>
             {basket.map((product, i) => (
-              <CheckoutProduct
+              <CheckoutProducts
                 key={i}
                 id={product.id}
                 title={product.title}
@@ -90,4 +91,4 @@ function Checkout({ classes }) {
   );
 }
 
-export default withStyles(styles)(Checkout);
+export default Checkout;

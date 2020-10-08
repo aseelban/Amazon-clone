@@ -1,5 +1,7 @@
+import { makeStyles } from "@material-ui/core/styles";
+import { createUseStyles } from "react-jss";
 
-const styles = {
+const useStyles = createUseStyles({
   container: {
     marginTop: "5rem",
     bottom: 0,
@@ -7,10 +9,10 @@ const styles = {
     position: "fixed",
     width: "100%",
     background: "#f3f3f3",
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderTop: '1px solid #dadada',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderTop: "1px solid #dadada",
   },
   phone: {
     border: "2px solid #eee",
@@ -20,11 +22,9 @@ const styles = {
     width: "100%",
     height: "auto",
     boxShadow: "0 40px 80px rgba(0,0,0,0.15)",
-    padding: '0.4rem'
-
+    padding: "0.4rem",
   },
   nav__icons: {
-
     "& ul": {
       listStyleType: "none",
       display: "-webkit-box",
@@ -34,8 +34,6 @@ const styles = {
       justifyContent: "space-between",
       padding: 0,
       margin: 0,
-
-      
     },
     "& a": {
       fontFamily: "sans-serif",
@@ -77,7 +75,6 @@ const styles = {
         "opacity 0.6s, max-width 0.6s, transform 0.6s, -webkit-transform 0.6s",
       WebkitTransitionTimingFunction: "ease-in-out",
       transitionTimingFunction: "ease-in-out",
-
     },
 
     "& a:hover span": {
@@ -93,6 +90,6 @@ const styles = {
       transform: "translate3d(0, 0, 0)",
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

@@ -1,6 +1,8 @@
+import { makeStyles } from '@material-ui/core/styles';
+import { createUseStyles } from 'react-jss';
 import breakpoints from "./breakpoints";
 
-const styles = {
+const useStyles = createUseStyles({
   container: {
     maxWidth: 1500,
     marginLeft: "auto",
@@ -30,10 +32,10 @@ const styles = {
     MozBoxShadow: "-13px 1px 21px 0px rgb(175 175 175 / 75%)",
     boxShadow: "-13px 1px 21px 0px rgb(175 175 175 / 75%)",
     [breakpoints.down("sm")]: {
-      padding: "0.2rem 1rem",
-      fontSize: 15,
+      padding: "0.2rem 1rem !important",
+      fontSize: '15px !important',
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

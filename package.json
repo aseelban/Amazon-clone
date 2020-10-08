@@ -2,6 +2,7 @@
   "name": "amazon-clone",
   "version": "0.1.0",
   "private": true,
+  "public": "public",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -16,6 +17,7 @@
     "react-credit-cards": "^0.8.3",
     "react-currency-format": "^1.0.0",
     "react-dom": "^16.13.1",
+    "react-jss": "^10.4.0",
     "react-multi-carousel": "^2.5.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"

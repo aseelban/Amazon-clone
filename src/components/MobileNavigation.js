@@ -1,13 +1,15 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import styles from "./styles/MobileNavigationStyle";
+import useStyles from "./styles/MobileNavigationStyle";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ShoppingBasketOutlinedIcon from "@material-ui/icons/ShoppingBasketOutlined";
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import { Link } from "react-router-dom";
 
-function MobileNavigation({ classes }) {
+function MobileNavigation() {
+  const classes = useStyles();
+
 
   return (
     <div className={classes.container}>
@@ -45,4 +47,4 @@ function MobileNavigation({ classes }) {
   );
 }
 
-export default withStyles(styles)(MobileNavigation);
+export default MobileNavigation;

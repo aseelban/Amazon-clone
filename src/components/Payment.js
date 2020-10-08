@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/PaymentStyle";
-import {
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import useStyles from "./styles/PaymentStyle";
+import { Grid, Typography } from "@material-ui/core";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import PaymentForm from "./PaymentForm";
 import PaymentUserInfo from "./PaymentUserInfo";
 import PaymentOrder from "./PaymentOrder";
 
-function Payment({ classes }) {
+function Payment() {
+  const classes = useStyles();
 
   useEffect(() => {
     document.title = "AmazonClone - Checkout";
@@ -36,7 +33,7 @@ function Payment({ classes }) {
         </Grid>
         <div className={classes.wrapper__children}>
           <PaymentOrder />
-          <PaymentUserInfo />
+          {/* <PaymentUserInfo /> */}
           <PaymentForm />
         </div>
       </Grid>
@@ -44,4 +41,4 @@ function Payment({ classes }) {
   );
 }
 
-export default withStyles(styles)(Payment);
+export default Payment;

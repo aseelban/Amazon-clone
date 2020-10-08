@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/NotFoundPageStyle";
+import useStyles from "./styles/NotFoundPageStyle";
 
-function NotFoundPage({ classes }) {
+function NotFoundPage() {
+  const classes = useStyles();
+
   return (
     <div className={classes.container}>
       <h1>404</h1>
@@ -13,4 +14,4 @@ function NotFoundPage({ classes }) {
   );
 }
 
-export default withStyles(styles)(NotFoundPage);
+export default NotFoundPage;

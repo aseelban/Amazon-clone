@@ -1,6 +1,5 @@
 import React from "react";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/HeaderStyle";
+import useStyles from "./styles/HeaderStyle";
 import logo from "./img/amazon-logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
@@ -10,8 +9,9 @@ import { auth } from "../firebase";
 import { Grid } from "@material-ui/core";
 import HeaderMenu from "./HeaderMenu";
 
-const Header = ({ classes }) => {
+const Header = () => {
   const [{ basket, user }, dispatch] = useStateValue();
+  const classes = useStyles();
 
   const handleAuthentication = () => {
     if (user) {
@@ -19,14 +19,13 @@ const Header = ({ classes }) => {
     }
   };
 
-
   return (
     <Grid
       className={classes.container}
       container
       direction="row"
       justify="space-between"
-      alignItems="flex-start"
+      alignItems="center"
     >
       <Grid item xs={10} md={1}>
         {/* logo */}
@@ -36,7 +35,11 @@ const Header = ({ classes }) => {
       </Grid>
       {/* search bar */}
       <Grid className={classes.search} item xs md={7}>
-        <input placeholder="Search for product" className={classes.searchInput} type="text" />
+        <input
+          placeholder="Search for product"
+          className={classes.searchInput}
+          type="text"
+        />
         <SearchIcon className={classes.searchIcon} />
       </Grid>
 
@@ -48,10 +51,7 @@ const Header = ({ classes }) => {
       {/* nav item */}
       <Grid className={classes.nav} item xs md={3}>
         <Link to={!user && "/login"}>
-          <div
-            onClick={handleAuthentication}
-            className={classes.option}
-          >
+          <div onClick={handleAuthentication} className={classes.option}>
             <span className={classes.optionLineOne}>
               Hello {user ? user.email : "Guset"}
             </span>
@@ -71,11 +71,7 @@ const Header = ({ classes }) => {
         <Link to="/checkout">
           <div className={classes.optionBasket}>
             <LocalMallOutlinedIcon />
-            <span
-              className={
-                (classes.optionLineTwo, classes.basketCount)
-              }
-            >
+            <span className={(classes.optionLineTwo, classes.basketCount)}>
               {basket?.length}
             </span>
           </div>
@@ -85,4 +81,4 @@ const Header = ({ classes }) => {
   );
 };
 
-export default withStyles(styles)(Header);
+export default Header;

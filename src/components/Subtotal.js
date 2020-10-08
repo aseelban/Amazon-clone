@@ -7,16 +7,17 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/SubTotalStyle";
+import useStyles from "./styles/SubTotalStyle";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../context/StateProvider";
 import { getBasketTotal } from "../context/reducer";
 import { useHistory } from "react-router-dom";
 
-function Subtotal({ classes }) {
+function Subtotal() {
   const [{ basket }] = useStateValue();
   const history = useHistory();
+  const classes = useStyles();
+
 
   const handleCheckout = (e) => {
     e.preventDefault();
@@ -32,7 +33,6 @@ function Subtotal({ classes }) {
               <Card className={classes.chekout__right__wrapper}>
                 <Typography
                   variant="h6"
-                  gutterBottom
                   className={classes.items}
                 >
                   Subtotal ({basket?.length} items):
@@ -71,4 +71,4 @@ function Subtotal({ classes }) {
   );
 }
 
-export default withStyles(styles)(Subtotal);
+export default Subtotal;

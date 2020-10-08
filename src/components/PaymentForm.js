@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/PaymentFormStyle";
+import useStyles from "./styles/PaymentFormStyle";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
 import {
@@ -16,7 +15,7 @@ import DateRangeIcon from "@material-ui/icons/DateRange";
 import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
 import SendIcon from "@material-ui/icons/Send";
 
-function PaymentForm({ classes }) {
+function PaymentForm() {
   const [state, setState] = useState({
     cvc: "",
     expiry: "",
@@ -24,6 +23,8 @@ function PaymentForm({ classes }) {
     name: "",
     number: "",
   });
+  const classes = useStyles();
+
 
   const handleInputFocus = (e) => {
     setState((prevState) => ({
@@ -69,7 +70,7 @@ function PaymentForm({ classes }) {
           <form className={classes.wrapper__form}>
             <Grid item xs="0" sm="3" md="3">
               <TextField
-                type="tel"
+                type="text"
                 name="name"
                 onChange={handleInputChange}
                 onFocus={handleInputFocus}
@@ -161,4 +162,4 @@ function PaymentForm({ classes }) {
   );
 }
 
-export default withStyles(styles)(PaymentForm);
+export default PaymentForm;

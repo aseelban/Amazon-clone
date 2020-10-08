@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { withStyles } from "@material-ui/styles";
-import styles from "./styles/HomeStyle";
+import useStyles from "./styles/HomeStyle";
 import prime_background from "./img/home_prime_img.jpg";
 import { Grid, Typography } from "@material-ui/core";
 import DiscoverList from "./DiscoverList";
 import ProductList from "./ProductList";
 
-function Home({ classes }) {
+function Home() {
+  const classes = useStyles();
+
   useEffect(() => {
     document.title = "AmazonClone - Home";
   }, []);
@@ -85,4 +87,4 @@ function Home({ classes }) {
   );
 }
 
-export default withStyles(styles)(Home);
+export default Home;

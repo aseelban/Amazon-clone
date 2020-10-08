@@ -1,9 +1,10 @@
 import React from "react";
-import { withStyles } from "@material-ui/styles";
-import styles from "./styles/PaymentUserInfoStyle";
+import useStyles from "./styles/PaymentUserInfoStyle";
 import { Grid, TextField, Typography } from "@material-ui/core";
 
-function PaymentUserInfo({ classes }) {
+function PaymentUserInfo() {
+  const classes = useStyles();
+
   return (
     <Grid className={classes.container} item md="12">
       <Typography
@@ -73,4 +74,4 @@ function PaymentUserInfo({ classes }) {
   );
 }
 
-export default withStyles(styles)(PaymentUserInfo);
+export default PaymentUserInfo;
