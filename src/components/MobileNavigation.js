@@ -1,15 +1,15 @@
 import React from "react";
-import { withStyles } from "@material-ui/styles";
 import useStyles from "./styles/MobileNavigationStyle";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ShoppingBasketOutlinedIcon from "@material-ui/icons/ShoppingBasketOutlined";
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
+import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../context/StateProvider";
 
 function MobileNavigation() {
+  const [{ basket }] = useStateValue();
   const classes = useStyles();
-
 
   return (
     <div className={classes.container}>
@@ -23,19 +23,20 @@ function MobileNavigation() {
               </Link>
             </li>
             <li>
-              <a href="#news">
+              <a>
                 <FavoriteBorderIcon />
                 <span>Wishlist</span>
               </a>
             </li>
-            <li>
+            <li className={classes.checkout}>
               <Link to="/checkout">
                 <ShoppingBasketOutlinedIcon />
                 <span>Cart</span>
               </Link>
+              {basket?.length ? <div>{basket?.length}</div> : ""}
             </li>
             <li>
-              <a href="#search">
+              <a>
                 <SearchOutlinedIcon />
                 <span>Search</span>
               </a>

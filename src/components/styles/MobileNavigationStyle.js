@@ -90,6 +90,26 @@ const useStyles = createUseStyles({
       transform: "translate3d(0, 0, 0)",
     },
   },
+  mobile:{
+    right: '-3px',
+    top: '13px',
+    border: `2px solid #d7d7d7`,
+    padding: '0 4px'
+  },
+  checkout:{
+    position: 'relative',
+    "& div":{
+      top: '-2px',
+      right: 9,
+      cursor: 'pointer',
+      padding: '1px 4px',
+      position: 'absolute',
+      background: '#ff9819',
+      color: '#fff',
+      fontSize: 12,
+      borderRadius: '100%',
+    }
+  }
 });
 
 export default useStyles;

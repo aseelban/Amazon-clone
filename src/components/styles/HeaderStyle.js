@@ -28,9 +28,9 @@ const useStyles = createUseStyles({
   search: {
     display: "flex",
     flex: "1 1",
-    [breakpoints.down("md")]: {
-      display: "none",
-    },
+    // [breakpoints.down("md")]: {
+    //   display: "none",
+    // },
   },
 
   searchInput: {
@@ -56,12 +56,12 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-evenly",
 
-    [breakpoints.down("md")]: {
-      display: "none",
-    },
+    // [breakpoints.down("md")]: {
+    //   display: "none",
+    // },
   },
   nav__toggle: {
-    display: "none",
+    display: "flex",
 
     [breakpoints.down("md")]: {
       display: "flex",

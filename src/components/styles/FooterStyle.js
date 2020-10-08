@@ -162,11 +162,11 @@ const useStyles = createUseStyles({
       color: "#e80e0e",
     },
   },
-  MobileNavigation: {
-    [breakpoints.up("sm")]: {
-      display: "none",
-    },
-  },
+  // MobileNavigation: {
+  //   [breakpoints.up("sm")]: {
+  //     display: "none",
+  //   },
+  // },
 });
 
 export default useStyles;
